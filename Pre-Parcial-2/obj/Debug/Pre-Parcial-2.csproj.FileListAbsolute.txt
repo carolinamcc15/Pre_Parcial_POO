@@ -32,3 +32,40 @@ C:\Users\user\Desktop\PreParcial2\PreParcialPOO\Pre-Parcial-2\bin\Debug\System.T
 C:\Users\user\Desktop\PreParcial2\PreParcialPOO\Pre-Parcial-2\bin\Debug\System.ValueTuple.xml
 C:\Users\user\Desktop\PreParcial2\PreParcialPOO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.exe.config
 C:\Users\user\Desktop\PreParcial2\PreParcialPOO\Pre-Parcial-2\obj\Debug\Pre-Parcial-2.csproj.CopyComplete
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre-Parcial-2.csprojAssemblyReference.cache
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.exe.config
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.AdminUser.resources
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.Form1.resources
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.NormalUser.resources
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.Properties.Resources.resources
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre-Parcial-2.csproj.GenerateResource.cache
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.exe
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.pdb
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\Pre_Parcial_2.exe.config
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\Pre_Parcial_2.exe
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\Pre_Parcial_2.pdb
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\Npgsql.dll
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Buffers.dll
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Memory.dll
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Text.Json.dll
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.ValueTuple.dll
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\Npgsql.pdb
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\Npgsql.xml
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Buffers.xml
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Memory.xml
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Text.Json.xml
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\System.ValueTuple.xml
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre-Parcial-2.csproj.CopyComplete
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.dll
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.pdb
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.xml

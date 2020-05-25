@@ -40,6 +40,17 @@ namespace Pre_Parcial_2
         private void AdminUser_Load(object sender, EventArgs e)
         {
             RefreshControls();
+            RefreshControlsProducts();
+            dvgOrdersHistory1.DataSource = PedidoDAO.ViewOrdersHistory();
+               String[] categories;
+               categories = new string[6];
+               categories[0] = "Bebidas";
+               categories[1] = "Boquitas";
+               categories[2] = "Despensa";
+               categories[3] = "Frutas y verduras";
+               categories[4] = "Lácteos";
+               categories[5] = "Desechables";
+               cmbCategory.DataSource = categories;
         }
         
         private void RefreshControls()
@@ -49,6 +60,14 @@ namespace Pre_Parcial_2
             cmbUsers.DisplayMember = "Nombre";
             cmbUsers.DataSource = UsuarioDAO.getUsers();
         }
+        
+        private void RefreshControlsProducts()
+        {
+            cmbProducts.DataSource = null;
+            cmbProducts.ValueMember = "Nombre";
+            cmbProducts.DisplayMember = "Nombre";
+            cmbProducts.DataSource = InventarioDAO.getInventory();
+        }        
 
         private void cmbUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -120,5 +139,45 @@ namespace Pre_Parcial_2
                 }
             }
         }
+
+        private void btnViewDetails_Click(object sender, EventArgs e)
+        {
+            //Mostrar detalles del pedido
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            if (txtNameP.Text.Equals("")||
+                txtDesc.Text.Equals("")||
+                txtPrice.Text.Equals("")||
+                txtImg.Text.Equals("")||
+                cmbCategory.SelectedItem.ToString().Equals(""))
+            {
+                MessageBox.Show("Debe llenar los campos.", "Tienda San Ronaldo", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }else
+            { 
+                Inventario product = new Inventario();
+                product.Nombre = txtNameP.Text;
+                product.Descripcion = txtDesc.Text;
+                product.Precio = Convert.ToDouble(txtPrice.Text);
+                product.Categoria = cmbCategory.SelectedItem.ToString();
+                product.Imagen = txtImg.Text;                
+                try
+                {
+                    InventarioDAO.InsertProduct(product);
+                    MessageBox.Show("Nuevo producto agregado exitosamente.");
+                    RefreshControlsProducts();
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show("Ha ocurrido un error, revise los campos.", "Tienda San Ronaldo", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+               }
+                
+            }
+        }
+
+       
+        }
     }
-}

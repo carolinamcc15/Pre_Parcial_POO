@@ -19,8 +19,8 @@ namespace Pre_Parcial_2
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            NormalUser normal = new NormalUser();
-            normal.Show();
+           NormalUser normal = new NormalUser();
+           normal.Show();
             AdminUser admin = new AdminUser();
             admin.Show();
         }
