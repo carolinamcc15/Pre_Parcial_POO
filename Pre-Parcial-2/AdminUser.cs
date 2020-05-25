@@ -64,7 +64,7 @@ namespace Pre_Parcial_2
         private void RefreshProductsControls()
         {
             cmbProducts.DataSource = null;
-            cmbProducts.ValueMember = "Nombre";
+            cmbProducts.ValueMember = "IdProducto";
             cmbProducts.DisplayMember = "Nombre";
             cmbProducts.DataSource = InventarioDAO.GetInventory();
         }        
@@ -142,7 +142,8 @@ namespace Pre_Parcial_2
 
         private void btnViewDetails_Click(object sender, EventArgs e)
         {
-            //Mostrar detalles del pedido
+            dvgOrdersHistory1.DataSource = null;
+            dvgOrdersHistory1.DataSource = PedidoDAO.ViewOrdersDetails((int) nudNumPedido.Value);
         }
 
         private void btnCreate_Click(object sender, EventArgs e)

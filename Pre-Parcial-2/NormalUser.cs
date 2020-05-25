@@ -15,21 +15,24 @@ namespace Pre_Parcial_2
 
         private void NormalUser_Load(object sender, EventArgs e)
         {
-            dgvOrdersHistory.DataSource = PedidoDAO.ViewOrdersHistory();
-            String[] categories;
-                        categories = new string[6];
-                        categories[0] = "Bebidas";
-                        categories[1] = "Boquitas";
-                        categories[2] = "Despensa";
-                        categories[3] = "Frutas y verduras";
-                        categories[4] = "Lácteos";
-                        categories[5] = "Desechables";
+            dgvOrdersHistory.DataSource = PedidoDAO.ViewUserOrdersHistory(user);
+            lblHistory.Text += user.Nombre; 
+            String[] categories = 
+            {
+                "Bebidas",
+                "Boquitas",
+                "Despensa",
+                "Frutas y verduras",
+                "Lácteos",
+                "Desechables"
+            };
             cmbCategories.DataSource = categories;
         }
 
         private void btnDetails_Click(object sender, EventArgs e)
         {
-                    
+            dgvOrdersHistory.DataSource = null;
+            dgvOrdersHistory.DataSource = PedidoDAO.viewUserOrdersDetails((int) nudIdPedido.Value,user);
         }
 
         private void cmbCategories_SelectedIndexChanged(object sender, EventArgs e)

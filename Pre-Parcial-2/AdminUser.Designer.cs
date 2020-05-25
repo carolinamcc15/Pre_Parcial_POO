@@ -84,7 +84,6 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dvgOrdersHistory1 = new System.Windows.Forms.DataGridView();
             this.btnViewDetails = new System.Windows.Forms.Button();
-            this.nudNumPedido = new System.Windows.Forms.NumericUpDown();
             this.lblIDPedido = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpViewOrders = new System.Windows.Forms.TableLayoutPanel();
@@ -113,6 +112,7 @@ namespace Pre_Parcial_2
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.nudNumPedido = new System.Windows.Forms.NumericUpDown();
             this.tlpTabCtrl.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tpAdminU.SuspendLayout();
@@ -131,7 +131,6 @@ namespace Pre_Parcial_2
             this.tpAdminP.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dvgOrdersHistory1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.nudNumPedido)).BeginInit();
             this.tlpViewOrders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.nudIdPedido)).BeginInit();
@@ -141,6 +140,7 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.nudNumPedido)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpTabCtrl
@@ -241,7 +241,7 @@ namespace Pre_Parcial_2
             this.tlpGroup1.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.62882F));
             this.tlpGroup1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tlpGroup1.Controls.Add(this.txtName, 1, 0);
             this.tlpGroup1.Controls.Add(this.txtPassword, 1, 1);
             this.tlpGroup1.Controls.Add(this.lblPassword, 0, 1);
@@ -269,7 +269,7 @@ namespace Pre_Parcial_2
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtName.Location = new System.Drawing.Point(354, 22);
+            this.txtName.Location = new System.Drawing.Point(353, 22);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(348, 30);
@@ -280,7 +280,7 @@ namespace Pre_Parcial_2
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPassword.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtPassword.Location = new System.Drawing.Point(354, 90);
+            this.txtPassword.Location = new System.Drawing.Point(353, 90);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(348, 30);
@@ -291,7 +291,7 @@ namespace Pre_Parcial_2
             this.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblPassword.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblPassword.Location = new System.Drawing.Point(129, 90);
+            this.lblPassword.Location = new System.Drawing.Point(128, 90);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(145, 31);
@@ -303,7 +303,7 @@ namespace Pre_Parcial_2
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblName.Location = new System.Drawing.Point(129, 21);
+            this.lblName.Location = new System.Drawing.Point(128, 21);
             this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(145, 31);
@@ -315,7 +315,7 @@ namespace Pre_Parcial_2
             this.chkAdmin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chkAdmin.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.chkAdmin.Location = new System.Drawing.Point(447, 139);
+            this.chkAdmin.Location = new System.Drawing.Point(446, 139);
             this.chkAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.chkAdmin.Name = "chkAdmin";
             this.chkAdmin.Size = new System.Drawing.Size(162, 28);
@@ -329,7 +329,7 @@ namespace Pre_Parcial_2
             this.button1.BackColor = System.Drawing.Color.Wheat;
             this.button1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button1.Location = new System.Drawing.Point(278, 207);
+            this.button1.Location = new System.Drawing.Point(277, 207);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 52);
@@ -549,7 +549,7 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel8.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tableLayoutPanel8.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 291F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 293F));
             this.tableLayoutPanel8.Controls.Add(this.txtNameP, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.txtPrice, 1, 1);
             this.tableLayoutPanel8.Controls.Add(this.lblPrice, 0, 1);
@@ -589,7 +589,7 @@ namespace Pre_Parcial_2
             this.txtNameP.Location = new System.Drawing.Point(109, 28);
             this.txtNameP.Margin = new System.Windows.Forms.Padding(2);
             this.txtNameP.Name = "txtNameP";
-            this.txtNameP.Size = new System.Drawing.Size(239, 30);
+            this.txtNameP.Size = new System.Drawing.Size(237, 30);
             this.txtNameP.TabIndex = 2;
             // 
             // txtPrice
@@ -600,7 +600,7 @@ namespace Pre_Parcial_2
             this.txtPrice.Location = new System.Drawing.Point(109, 107);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(239, 30);
+            this.txtPrice.Size = new System.Drawing.Size(237, 30);
             this.txtPrice.TabIndex = 3;
             // 
             // lblPrice
@@ -632,7 +632,7 @@ namespace Pre_Parcial_2
             this.lblDesc.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDesc.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblDesc.Location = new System.Drawing.Point(408, 27);
+            this.lblDesc.Location = new System.Drawing.Point(406, 27);
             this.lblDesc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(117, 31);
@@ -644,7 +644,7 @@ namespace Pre_Parcial_2
             this.lblImg.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblImg.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblImg.Location = new System.Drawing.Point(408, 107);
+            this.lblImg.Location = new System.Drawing.Point(406, 107);
             this.lblImg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblImg.Name = "lblImg";
             this.lblImg.Size = new System.Drawing.Size(117, 31);
@@ -656,7 +656,7 @@ namespace Pre_Parcial_2
             this.txtImg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtImg.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtImg.Location = new System.Drawing.Point(553, 107);
+            this.txtImg.Location = new System.Drawing.Point(552, 107);
             this.txtImg.Margin = new System.Windows.Forms.Padding(2);
             this.txtImg.Name = "txtImg";
             this.txtImg.Size = new System.Drawing.Size(240, 30);
@@ -667,7 +667,7 @@ namespace Pre_Parcial_2
             this.txtDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDesc.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtDesc.Location = new System.Drawing.Point(538, 28);
+            this.txtDesc.Location = new System.Drawing.Point(537, 28);
             this.txtDesc.Margin = new System.Windows.Forms.Padding(2);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(269, 30);
@@ -682,7 +682,7 @@ namespace Pre_Parcial_2
             this.cmbCategory.Location = new System.Drawing.Point(109, 174);
             this.cmbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(239, 32);
+            this.cmbCategory.Size = new System.Drawing.Size(237, 32);
             this.cmbCategory.TabIndex = 9;
             // 
             // lblCategory
@@ -702,7 +702,7 @@ namespace Pre_Parcial_2
             this.lblStock.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblStock.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblStock.Location = new System.Drawing.Point(408, 175);
+            this.lblStock.Location = new System.Drawing.Point(406, 175);
             this.lblStock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(117, 31);
@@ -714,7 +714,7 @@ namespace Pre_Parcial_2
             this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtStock.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtStock.Location = new System.Drawing.Point(553, 175);
+            this.txtStock.Location = new System.Drawing.Point(552, 175);
             this.txtStock.Margin = new System.Windows.Forms.Padding(2);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(240, 30);
@@ -729,7 +729,7 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel8.SetColumnSpan(this.btnCreate, 2);
             this.btnCreate.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnCreate.Location = new System.Drawing.Point(352, 292);
+            this.btnCreate.Location = new System.Drawing.Point(350, 292);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
             this.tableLayoutPanel8.SetRowSpan(this.btnCreate, 2);
@@ -765,7 +765,7 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel9.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.40816F));
             this.tableLayoutPanel9.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
             this.tableLayoutPanel9.Controls.Add(this.cmbProducts, 2, 0);
             this.tableLayoutPanel9.Controls.Add(this.lblSelect, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.label8, 1, 1);
@@ -792,10 +792,10 @@ namespace Pre_Parcial_2
             // 
             this.cmbProducts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbProducts.FormattingEnabled = true;
-            this.cmbProducts.Location = new System.Drawing.Point(409, 20);
+            this.cmbProducts.Location = new System.Drawing.Point(407, 20);
             this.cmbProducts.Margin = new System.Windows.Forms.Padding(2);
             this.cmbProducts.Name = "cmbProducts";
-            this.cmbProducts.Size = new System.Drawing.Size(219, 29);
+            this.cmbProducts.Size = new System.Drawing.Size(218, 29);
             this.cmbProducts.TabIndex = 0;
             this.cmbProducts.SelectedIndexChanged += new System.EventHandler(this.cmbProducts_SelectedIndexChanged);
             // 
@@ -804,7 +804,7 @@ namespace Pre_Parcial_2
             this.lblSelect.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblSelect.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblSelect.Location = new System.Drawing.Point(173, 19);
+            this.lblSelect.Location = new System.Drawing.Point(171, 19);
             this.lblSelect.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSelect.Name = "lblSelect";
             this.lblSelect.Size = new System.Drawing.Size(232, 31);
@@ -818,7 +818,7 @@ namespace Pre_Parcial_2
                                                        System.Windows.Forms.AnchorStyles.Right)));
             this.label8.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label8.Location = new System.Drawing.Point(173, 91);
+            this.label8.Location = new System.Drawing.Point(171, 91);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(232, 31);
@@ -829,7 +829,7 @@ namespace Pre_Parcial_2
             // nudStock
             // 
             this.nudStock.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.nudStock.Location = new System.Drawing.Point(410, 92);
+            this.nudStock.Location = new System.Drawing.Point(407, 92);
             this.nudStock.Margin = new System.Windows.Forms.Padding(2);
             this.nudStock.Maximum = new decimal(new int[] {20000000, 0, 0, 0});
             this.nudStock.Name = "nudStock";
@@ -843,7 +843,7 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel9.SetColumnSpan(this.btnModifyStock, 2);
             this.btnModifyStock.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnModifyStock.Location = new System.Drawing.Point(332, 181);
+            this.btnModifyStock.Location = new System.Drawing.Point(330, 181);
             this.btnModifyStock.Margin = new System.Windows.Forms.Padding(2);
             this.btnModifyStock.Name = "btnModifyStock";
             this.btnModifyStock.Size = new System.Drawing.Size(135, 47);
@@ -859,7 +859,7 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel9.SetColumnSpan(this.btnDeleteProduct, 2);
             this.btnDeleteProduct.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnDeleteProduct.Location = new System.Drawing.Point(284, 260);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(282, 260);
             this.btnDeleteProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(232, 47);
@@ -891,7 +891,7 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel3.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
             this.tableLayoutPanel3.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableLayoutPanel3.Controls.Add(this.dvgOrdersHistory1, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.btnViewDetails, 3, 2);
             this.tableLayoutPanel3.Controls.Add(this.nudNumPedido, 2, 2);
@@ -928,7 +928,7 @@ namespace Pre_Parcial_2
             this.dvgOrdersHistory1.Name = "dvgOrdersHistory1";
             this.dvgOrdersHistory1.ReadOnly = true;
             this.dvgOrdersHistory1.RowTemplate.Height = 28;
-            this.dvgOrdersHistory1.Size = new System.Drawing.Size(782, 598);
+            this.dvgOrdersHistory1.Size = new System.Drawing.Size(778, 598);
             this.dvgOrdersHistory1.TabIndex = 0;
             // 
             // btnViewDetails
@@ -937,7 +937,7 @@ namespace Pre_Parcial_2
             this.btnViewDetails.BackColor = System.Drawing.Color.Wheat;
             this.btnViewDetails.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnViewDetails.Location = new System.Drawing.Point(635, 631);
+            this.btnViewDetails.Location = new System.Drawing.Point(631, 631);
             this.btnViewDetails.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewDetails.Name = "btnViewDetails";
             this.btnViewDetails.Size = new System.Drawing.Size(163, 46);
@@ -946,21 +946,12 @@ namespace Pre_Parcial_2
             this.btnViewDetails.UseVisualStyleBackColor = false;
             this.btnViewDetails.Click += new System.EventHandler(this.btnViewDetails_Click);
             // 
-            // nudNumPedido
-            // 
-            this.nudNumPedido.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudNumPedido.Location = new System.Drawing.Point(423, 641);
-            this.nudNumPedido.Margin = new System.Windows.Forms.Padding(2);
-            this.nudNumPedido.Name = "nudNumPedido";
-            this.nudNumPedido.Size = new System.Drawing.Size(133, 26);
-            this.nudNumPedido.TabIndex = 2;
-            // 
             // lblIDPedido
             // 
             this.lblIDPedido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIDPedido.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblIDPedido.Location = new System.Drawing.Point(59, 638);
+            this.lblIDPedido.Location = new System.Drawing.Point(58, 638);
             this.lblIDPedido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIDPedido.Name = "lblIDPedido";
             this.lblIDPedido.Size = new System.Drawing.Size(277, 32);
@@ -1344,6 +1335,15 @@ namespace Pre_Parcial_2
             this.button5.Text = "Modificar";
             this.button5.UseVisualStyleBackColor = false;
             // 
+            // nudNumPedido
+            // 
+            this.nudNumPedido.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudNumPedido.Location = new System.Drawing.Point(420, 641);
+            this.nudNumPedido.Margin = new System.Windows.Forms.Padding(2);
+            this.nudNumPedido.Name = "nudNumPedido";
+            this.nudNumPedido.Size = new System.Drawing.Size(133, 26);
+            this.nudNumPedido.TabIndex = 2;
+            // 
             // AdminUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1382,7 +1382,6 @@ namespace Pre_Parcial_2
             this.tpAdminP.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dvgOrdersHistory1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.nudNumPedido)).EndInit();
             this.tlpViewOrders.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.nudIdPedido)).EndInit();
@@ -1393,6 +1392,7 @@ namespace Pre_Parcial_2
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.nudNumPedido)).EndInit();
             this.ResumeLayout(false);
         }
 

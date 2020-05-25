@@ -69,7 +69,7 @@ namespace Pre_Parcial_2
             this.tlpNormalUser.Controls.Add(this.tabNormalUser, 1, 1);
             this.tlpNormalUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNormalUser.Location = new System.Drawing.Point(0, 0);
-            this.tlpNormalUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tlpNormalUser.Margin = new System.Windows.Forms.Padding(2);
             this.tlpNormalUser.Name = "tlpNormalUser";
             this.tlpNormalUser.RowCount = 3;
             this.tlpNormalUser.RowStyles.Add(
@@ -89,7 +89,7 @@ namespace Pre_Parcial_2
             this.tabNormalUser.Font = new System.Drawing.Font("Georgia", 10F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.tabNormalUser.Location = new System.Drawing.Point(23, 10);
-            this.tabNormalUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabNormalUser.Margin = new System.Windows.Forms.Padding(2);
             this.tabNormalUser.Name = "tabNormalUser";
             this.tabNormalUser.SelectedIndex = 0;
             this.tabNormalUser.Size = new System.Drawing.Size(839, 747);
@@ -100,9 +100,9 @@ namespace Pre_Parcial_2
             this.tpOrder.BackColor = System.Drawing.Color.FloralWhite;
             this.tpOrder.Controls.Add(this.tlpOrder);
             this.tpOrder.Location = new System.Drawing.Point(4, 29);
-            this.tpOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpOrder.Margin = new System.Windows.Forms.Padding(2);
             this.tpOrder.Name = "tpOrder";
-            this.tpOrder.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpOrder.Padding = new System.Windows.Forms.Padding(2);
             this.tpOrder.Size = new System.Drawing.Size(831, 714);
             this.tpOrder.TabIndex = 0;
             this.tpOrder.Text = "Realizar pedido";
@@ -117,14 +117,14 @@ namespace Pre_Parcial_2
             this.tlpOrder.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.18435F));
             this.tlpOrder.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
             this.tlpOrder.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17F));
             this.tlpOrder.Controls.Add(this.cmbCategories, 2, 1);
             this.tlpOrder.Controls.Add(this.lblCategory, 1, 1);
             this.tlpOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpOrder.Location = new System.Drawing.Point(2, 2);
-            this.tlpOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tlpOrder.Margin = new System.Windows.Forms.Padding(2);
             this.tlpOrder.Name = "tlpOrder";
             this.tlpOrder.RowCount = 4;
             this.tlpOrder.RowStyles.Add(
@@ -143,8 +143,8 @@ namespace Pre_Parcial_2
             this.cmbCategories.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cmbCategories.FormattingEnabled = true;
-            this.cmbCategories.Location = new System.Drawing.Point(397, 32);
-            this.cmbCategories.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCategories.Location = new System.Drawing.Point(396, 32);
+            this.cmbCategories.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategories.Name = "cmbCategories";
             this.cmbCategories.Size = new System.Drawing.Size(278, 32);
             this.cmbCategories.TabIndex = 0;
@@ -155,7 +155,7 @@ namespace Pre_Parcial_2
             this.lblCategory.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCategory.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblCategory.Location = new System.Drawing.Point(119, 29);
+            this.lblCategory.Location = new System.Drawing.Point(118, 29);
             this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(274, 39);
@@ -168,10 +168,10 @@ namespace Pre_Parcial_2
             this.tpViewOrders.BackColor = System.Drawing.Color.FloralWhite;
             this.tpViewOrders.Controls.Add(this.tlpViewOrders);
             this.tpViewOrders.Location = new System.Drawing.Point(4, 29);
-            this.tpViewOrders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpViewOrders.Margin = new System.Windows.Forms.Padding(2);
             this.tpViewOrders.Name = "tpViewOrders";
-            this.tpViewOrders.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tpViewOrders.Size = new System.Drawing.Size(830, 714);
+            this.tpViewOrders.Padding = new System.Windows.Forms.Padding(2);
+            this.tpViewOrders.Size = new System.Drawing.Size(831, 714);
             this.tpViewOrders.TabIndex = 1;
             this.tpViewOrders.Text = "Historial de pedidos";
             // 
@@ -187,7 +187,7 @@ namespace Pre_Parcial_2
             this.tlpViewOrders.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
             this.tlpViewOrders.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tlpViewOrders.Controls.Add(this.dgvOrdersHistory, 1, 1);
             this.tlpViewOrders.Controls.Add(this.btnDetails, 3, 2);
             this.tlpViewOrders.Controls.Add(this.nudIdPedido, 2, 2);
@@ -195,7 +195,7 @@ namespace Pre_Parcial_2
             this.tlpViewOrders.Controls.Add(this.lblHistory, 1, 0);
             this.tlpViewOrders.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpViewOrders.Location = new System.Drawing.Point(2, 2);
-            this.tlpViewOrders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tlpViewOrders.Margin = new System.Windows.Forms.Padding(2);
             this.tlpViewOrders.Name = "tlpViewOrders";
             this.tlpViewOrders.RowCount = 4;
             this.tlpViewOrders.RowStyles.Add(
@@ -206,11 +206,12 @@ namespace Pre_Parcial_2
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.89904F));
             this.tlpViewOrders.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
-            this.tlpViewOrders.Size = new System.Drawing.Size(826, 710);
+            this.tlpViewOrders.Size = new System.Drawing.Size(827, 710);
             this.tlpViewOrders.TabIndex = 1;
             // 
             // dgvOrdersHistory
             // 
+            this.dgvOrdersHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOrdersHistory.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dgvOrdersHistory.ColumnHeadersHeightSizeMode =
                 System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -218,7 +219,7 @@ namespace Pre_Parcial_2
             this.dgvOrdersHistory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvOrdersHistory.GridColor = System.Drawing.Color.FloralWhite;
             this.dgvOrdersHistory.Location = new System.Drawing.Point(16, 61);
-            this.dgvOrdersHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvOrdersHistory.Margin = new System.Windows.Forms.Padding(2);
             this.dgvOrdersHistory.Name = "dgvOrdersHistory";
             this.dgvOrdersHistory.RowTemplate.Height = 28;
             this.dgvOrdersHistory.Size = new System.Drawing.Size(785, 547);
@@ -231,7 +232,7 @@ namespace Pre_Parcial_2
             this.btnDetails.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnDetails.Location = new System.Drawing.Point(638, 628);
-            this.btnDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDetails.Margin = new System.Windows.Forms.Padding(2);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(163, 46);
             this.btnDetails.TabIndex = 1;
@@ -243,7 +244,7 @@ namespace Pre_Parcial_2
             // 
             this.nudIdPedido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudIdPedido.Location = new System.Drawing.Point(425, 638);
-            this.nudIdPedido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudIdPedido.Margin = new System.Windows.Forms.Padding(2);
             this.nudIdPedido.Name = "nudIdPedido";
             this.nudIdPedido.Size = new System.Drawing.Size(133, 26);
             this.nudIdPedido.TabIndex = 2;
