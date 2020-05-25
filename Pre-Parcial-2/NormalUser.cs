@@ -5,8 +5,10 @@ namespace Pre_Parcial_2
 {
     public partial class NormalUser : Form
     {
-        public NormalUser()
+        private Usuario user;
+        public NormalUser(Usuario user)
         {
+            this.user = user;
             InitializeComponent();
             
         }
@@ -27,12 +29,17 @@ namespace Pre_Parcial_2
 
         private void btnDetails_Click(object sender, EventArgs e)
         {
-           
+                    
         }
 
         private void cmbCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Productos por categorías
+        }
+
+        private void NormalUser_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

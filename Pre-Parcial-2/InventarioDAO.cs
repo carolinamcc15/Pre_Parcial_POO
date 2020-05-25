@@ -8,17 +8,17 @@ namespace Pre_Parcial_2
     {
         public static void InsertProduct(Inventario inventario)
         {
-            String querySQL = $"INSERT INTO INVENTARIO (nombre, descripcion, precio, categoria, stock, imagen) " +
+            String querySql = $"INSERT INTO INVENTARIO (nombre, descripcion, precio, categoria, stock, imagen) " +
                               $" VALUES ('{inventario.Nombre}'," +
                               $"'{inventario.Descripcion}'," +
-                              $"{inventario.Precio}, " +
+                              $"{inventario.Precio:0.##}, " +
                               $"'{inventario.Categoria}', " +
                               $"{inventario.Stock}, " +
                               $"'{inventario.Imagen}');";
-            DBConnection.ExecuteNonQuery(querySQL);
+            DBConnection.ExecuteNonQuery(querySql);
         }
         
-        public static List<Inventario> getInventory()
+        public static List<Inventario> GetInventory()
         {
             String querySQL = "SELECT * FROM INVENTARIO;";
             DataTable dataT = DBConnection.ExecuteQuery(querySQL);
@@ -26,6 +26,7 @@ namespace Pre_Parcial_2
             foreach (DataRow fila in dataT.Rows)
             {
                 Inventario inventarioAux = new Inventario();
+                inventarioAux.IdProducto = Convert.ToInt32(fila[0].ToString());
                 inventarioAux.Nombre = fila[1].ToString();
                 inventarioAux.Descripcion = fila[2].ToString();
                 inventarioAux.Precio = Convert.ToDouble(fila[3].ToString());
@@ -37,18 +38,18 @@ namespace Pre_Parcial_2
             return listaProductos;
         }
         
-        public static void ModifyInventory(Inventario inv, int pk)
+        public static void ModifyInventory(Inventario inv, int stock)
         {
-            String querySQL = $"UPDATE INVENTARIO SET stock = " +
-                              $"{inv.Stock});" +
-                              $" WHERE idProducto = '{pk}';";
-            DBConnection.ExecuteNonQuery(querySQL);
+            String querySql = $"UPDATE INVENTARIO SET stock = " +
+                              $"{stock}" +
+                              $" WHERE idproducto = {inv.IdProducto};";
+            DBConnection.ExecuteNonQuery(querySql);
         }
 
-        public static void DeleteProduct(Inventario inv, int pk)
+        public static void DeleteProduct(Inventario inv)
         {
-            String querySQL = $"DELETE FROM INVENTARIO WHERE idProducto = '{pk}';";
-            DBConnection.ExecuteNonQuery(querySQL);
+            String querySql = $"DELETE FROM INVENTARIO WHERE idproducto = {inv.IdProducto};";
+            DBConnection.ExecuteNonQuery(querySql);
         }
     }
 }

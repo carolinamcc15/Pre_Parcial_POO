@@ -69,6 +69,8 @@ namespace Pre_Parcial_2
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
+            this.lblStock = new System.Windows.Forms.Label();
+            this.txtStock = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.grpModifyStock = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
@@ -76,8 +78,8 @@ namespace Pre_Parcial_2
             this.lblSelect = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.nudStock = new System.Windows.Forms.NumericUpDown();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnModifyStock = new System.Windows.Forms.Button();
+            this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.tpAdminP = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dvgOrdersHistory1 = new System.Windows.Forms.DataGridView();
@@ -111,8 +113,6 @@ namespace Pre_Parcial_2
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.lblStock = new System.Windows.Forms.Label();
-            this.txtStock = new System.Windows.Forms.TextBox();
             this.tlpTabCtrl.SuspendLayout();
             this.tabAdmin.SuspendLayout();
             this.tpAdminU.SuspendLayout();
@@ -156,6 +156,7 @@ namespace Pre_Parcial_2
             this.tlpTabCtrl.Controls.Add(this.tabAdmin, 1, 1);
             this.tlpTabCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpTabCtrl.Location = new System.Drawing.Point(0, 0);
+            this.tlpTabCtrl.Margin = new System.Windows.Forms.Padding(2);
             this.tlpTabCtrl.Name = "tlpTabCtrl";
             this.tlpTabCtrl.RowCount = 3;
             this.tlpTabCtrl.RowStyles.Add(
@@ -164,7 +165,7 @@ namespace Pre_Parcial_2
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95.45454F));
             this.tlpTabCtrl.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.59408F));
-            this.tlpTabCtrl.Size = new System.Drawing.Size(1059, 946);
+            this.tlpTabCtrl.Size = new System.Drawing.Size(882, 788);
             this.tlpTabCtrl.TabIndex = 0;
             // 
             // tabAdmin
@@ -175,20 +176,22 @@ namespace Pre_Parcial_2
             this.tabAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabAdmin.Font = new System.Drawing.Font("Georgia", 10F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.tabAdmin.Location = new System.Drawing.Point(28, 12);
+            this.tabAdmin.Location = new System.Drawing.Point(23, 10);
+            this.tabAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.tabAdmin.Name = "tabAdmin";
             this.tabAdmin.SelectedIndex = 0;
-            this.tabAdmin.Size = new System.Drawing.Size(1006, 896);
+            this.tabAdmin.Size = new System.Drawing.Size(839, 747);
             this.tabAdmin.TabIndex = 0;
             // 
             // tpAdminU
             // 
             this.tpAdminU.BackColor = System.Drawing.Color.FloralWhite;
             this.tpAdminU.Controls.Add(this.tlpInsideTab);
-            this.tpAdminU.Location = new System.Drawing.Point(4, 33);
+            this.tpAdminU.Location = new System.Drawing.Point(4, 29);
+            this.tpAdminU.Margin = new System.Windows.Forms.Padding(2);
             this.tpAdminU.Name = "tpAdminU";
-            this.tpAdminU.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAdminU.Size = new System.Drawing.Size(998, 859);
+            this.tpAdminU.Padding = new System.Windows.Forms.Padding(2);
+            this.tpAdminU.Size = new System.Drawing.Size(831, 714);
             this.tpAdminU.TabIndex = 0;
             this.tpAdminU.Text = "Modificar usuario";
             // 
@@ -203,14 +206,15 @@ namespace Pre_Parcial_2
             this.tlpInsideTab.Controls.Add(this.grpCreateUser, 0, 0);
             this.tlpInsideTab.Controls.Add(this.grpModifyUser, 0, 1);
             this.tlpInsideTab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpInsideTab.Location = new System.Drawing.Point(3, 3);
+            this.tlpInsideTab.Location = new System.Drawing.Point(2, 2);
+            this.tlpInsideTab.Margin = new System.Windows.Forms.Padding(2);
             this.tlpInsideTab.Name = "tlpInsideTab";
             this.tlpInsideTab.RowCount = 2;
             this.tlpInsideTab.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.02462F));
             this.tlpInsideTab.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.97538F));
-            this.tlpInsideTab.Size = new System.Drawing.Size(992, 853);
+            this.tlpInsideTab.Size = new System.Drawing.Size(827, 710);
             this.tlpInsideTab.TabIndex = 0;
             // 
             // grpCreateUser
@@ -220,9 +224,11 @@ namespace Pre_Parcial_2
             this.grpCreateUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpCreateUser.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.grpCreateUser.Location = new System.Drawing.Point(3, 3);
+            this.grpCreateUser.Location = new System.Drawing.Point(2, 2);
+            this.grpCreateUser.Margin = new System.Windows.Forms.Padding(2);
             this.grpCreateUser.Name = "grpCreateUser";
-            this.grpCreateUser.Size = new System.Drawing.Size(986, 361);
+            this.grpCreateUser.Padding = new System.Windows.Forms.Padding(2);
+            this.grpCreateUser.Size = new System.Drawing.Size(823, 301);
             this.grpCreateUser.TabIndex = 0;
             this.grpCreateUser.TabStop = false;
             this.grpCreateUser.Text = "Crear usuario";
@@ -235,7 +241,7 @@ namespace Pre_Parcial_2
             this.tlpGroup1.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.62882F));
             this.tlpGroup1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tlpGroup1.Controls.Add(this.txtName, 1, 0);
             this.tlpGroup1.Controls.Add(this.txtPassword, 1, 1);
             this.tlpGroup1.Controls.Add(this.lblPassword, 0, 1);
@@ -243,7 +249,8 @@ namespace Pre_Parcial_2
             this.tlpGroup1.Controls.Add(this.chkAdmin, 1, 2);
             this.tlpGroup1.Controls.Add(this.button1, 1, 3);
             this.tlpGroup1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpGroup1.Location = new System.Drawing.Point(3, 28);
+            this.tlpGroup1.Location = new System.Drawing.Point(2, 23);
+            this.tlpGroup1.Margin = new System.Windows.Forms.Padding(2);
             this.tlpGroup1.Name = "tlpGroup1";
             this.tlpGroup1.RowCount = 4;
             this.tlpGroup1.RowStyles.Add(
@@ -254,7 +261,7 @@ namespace Pre_Parcial_2
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.68912F));
             this.tlpGroup1.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.31088F));
-            this.tlpGroup1.Size = new System.Drawing.Size(980, 330);
+            this.tlpGroup1.Size = new System.Drawing.Size(819, 276);
             this.tlpGroup1.TabIndex = 6;
             // 
             // txtName
@@ -262,9 +269,10 @@ namespace Pre_Parcial_2
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtName.Location = new System.Drawing.Point(426, 27);
+            this.txtName.Location = new System.Drawing.Point(354, 22);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(417, 35);
+            this.txtName.Size = new System.Drawing.Size(348, 30);
             this.txtName.TabIndex = 2;
             // 
             // txtPassword
@@ -272,9 +280,10 @@ namespace Pre_Parcial_2
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPassword.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtPassword.Location = new System.Drawing.Point(426, 109);
+            this.txtPassword.Location = new System.Drawing.Point(354, 90);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(417, 35);
+            this.txtPassword.Size = new System.Drawing.Size(348, 30);
             this.txtPassword.TabIndex = 3;
             // 
             // lblPassword
@@ -282,9 +291,10 @@ namespace Pre_Parcial_2
             this.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblPassword.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblPassword.Location = new System.Drawing.Point(155, 108);
+            this.lblPassword.Location = new System.Drawing.Point(129, 90);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(174, 37);
+            this.lblPassword.Size = new System.Drawing.Size(145, 31);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Contraseña:";
             // 
@@ -293,9 +303,10 @@ namespace Pre_Parcial_2
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblName.Location = new System.Drawing.Point(155, 26);
+            this.lblName.Location = new System.Drawing.Point(129, 21);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(174, 37);
+            this.lblName.Size = new System.Drawing.Size(145, 31);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nombre:";
             // 
@@ -304,9 +315,10 @@ namespace Pre_Parcial_2
             this.chkAdmin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chkAdmin.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.chkAdmin.Location = new System.Drawing.Point(537, 167);
+            this.chkAdmin.Location = new System.Drawing.Point(447, 139);
+            this.chkAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.chkAdmin.Name = "chkAdmin";
-            this.chkAdmin.Size = new System.Drawing.Size(195, 34);
+            this.chkAdmin.Size = new System.Drawing.Size(162, 28);
             this.chkAdmin.TabIndex = 4;
             this.chkAdmin.Text = "Administrador";
             this.chkAdmin.UseVisualStyleBackColor = true;
@@ -317,9 +329,10 @@ namespace Pre_Parcial_2
             this.button1.BackColor = System.Drawing.Color.Wheat;
             this.button1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button1.Location = new System.Drawing.Point(335, 248);
+            this.button1.Location = new System.Drawing.Point(278, 207);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 63);
+            this.button1.Size = new System.Drawing.Size(152, 52);
             this.button1.TabIndex = 5;
             this.button1.Text = "Crear";
             this.button1.UseVisualStyleBackColor = false;
@@ -332,9 +345,11 @@ namespace Pre_Parcial_2
             this.grpModifyUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpModifyUser.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.grpModifyUser.Location = new System.Drawing.Point(3, 370);
+            this.grpModifyUser.Location = new System.Drawing.Point(2, 307);
+            this.grpModifyUser.Margin = new System.Windows.Forms.Padding(2);
             this.grpModifyUser.Name = "grpModifyUser";
-            this.grpModifyUser.Size = new System.Drawing.Size(986, 480);
+            this.grpModifyUser.Padding = new System.Windows.Forms.Padding(2);
+            this.grpModifyUser.Size = new System.Drawing.Size(823, 401);
             this.grpModifyUser.TabIndex = 1;
             this.grpModifyUser.TabStop = false;
             this.grpModifyUser.Text = "Modificar usuario";
@@ -357,7 +372,8 @@ namespace Pre_Parcial_2
             this.tlpGroup2.Controls.Add(this.btnDeleteUser, 0, 4);
             this.tlpGroup2.Controls.Add(this.btnModifyUser, 2, 4);
             this.tlpGroup2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpGroup2.Location = new System.Drawing.Point(3, 28);
+            this.tlpGroup2.Location = new System.Drawing.Point(2, 23);
+            this.tlpGroup2.Margin = new System.Windows.Forms.Padding(2);
             this.tlpGroup2.Name = "tlpGroup2";
             this.tlpGroup2.RowCount = 5;
             this.tlpGroup2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -365,7 +381,7 @@ namespace Pre_Parcial_2
             this.tlpGroup2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpGroup2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tlpGroup2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tlpGroup2.Size = new System.Drawing.Size(980, 449);
+            this.tlpGroup2.Size = new System.Drawing.Size(819, 376);
             this.tlpGroup2.TabIndex = 0;
             // 
             // chkModifyAdmin
@@ -374,9 +390,10 @@ namespace Pre_Parcial_2
             this.tlpGroup2.SetColumnSpan(this.chkModifyAdmin, 2);
             this.chkModifyAdmin.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.chkModifyAdmin.Location = new System.Drawing.Point(555, 270);
+            this.chkModifyAdmin.Location = new System.Drawing.Point(465, 227);
+            this.chkModifyAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.chkModifyAdmin.Name = "chkModifyAdmin";
-            this.chkModifyAdmin.Size = new System.Drawing.Size(195, 34);
+            this.chkModifyAdmin.Size = new System.Drawing.Size(162, 28);
             this.chkModifyAdmin.TabIndex = 6;
             this.chkModifyAdmin.Text = "Administrador";
             this.chkModifyAdmin.UseVisualStyleBackColor = true;
@@ -387,9 +404,10 @@ namespace Pre_Parcial_2
             this.tlpGroup2.SetColumnSpan(this.txtModifyName, 2);
             this.txtModifyName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtModifyName.Location = new System.Drawing.Point(444, 116);
+            this.txtModifyName.Location = new System.Drawing.Point(372, 97);
+            this.txtModifyName.Margin = new System.Windows.Forms.Padding(2);
             this.txtModifyName.Name = "txtModifyName";
-            this.txtModifyName.Size = new System.Drawing.Size(417, 35);
+            this.txtModifyName.Size = new System.Drawing.Size(348, 30);
             this.txtModifyName.TabIndex = 6;
             // 
             // lblModifyPass
@@ -397,9 +415,10 @@ namespace Pre_Parcial_2
             this.lblModifyPass.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblModifyPass.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblModifyPass.Location = new System.Drawing.Point(149, 204);
+            this.lblModifyPass.Location = new System.Drawing.Point(126, 172);
+            this.lblModifyPass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModifyPass.Name = "lblModifyPass";
-            this.lblModifyPass.Size = new System.Drawing.Size(174, 37);
+            this.lblModifyPass.Size = new System.Drawing.Size(145, 31);
             this.lblModifyPass.TabIndex = 6;
             this.lblModifyPass.Text = "Contraseña:";
             // 
@@ -408,9 +427,10 @@ namespace Pre_Parcial_2
             this.lblModifyName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblModifyName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblModifyName.Location = new System.Drawing.Point(149, 115);
+            this.lblModifyName.Location = new System.Drawing.Point(126, 97);
+            this.lblModifyName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModifyName.Name = "lblModifyName";
-            this.lblModifyName.Size = new System.Drawing.Size(174, 37);
+            this.lblModifyName.Size = new System.Drawing.Size(145, 31);
             this.lblModifyName.TabIndex = 6;
             this.lblModifyName.Text = "Nombre:";
             // 
@@ -418,9 +438,10 @@ namespace Pre_Parcial_2
             // 
             this.cmbUsers.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbUsers.FormattingEnabled = true;
-            this.cmbUsers.Location = new System.Drawing.Point(329, 30);
+            this.cmbUsers.Location = new System.Drawing.Point(276, 23);
+            this.cmbUsers.Margin = new System.Windows.Forms.Padding(2);
             this.cmbUsers.Name = "cmbUsers";
-            this.cmbUsers.Size = new System.Drawing.Size(320, 35);
+            this.cmbUsers.Size = new System.Drawing.Size(267, 29);
             this.cmbUsers.TabIndex = 0;
             this.cmbUsers.SelectedIndexChanged += new System.EventHandler(this.cmbUsers_SelectedIndexChanged);
             // 
@@ -430,9 +451,10 @@ namespace Pre_Parcial_2
             this.tlpGroup2.SetColumnSpan(this.txtModifyPassword, 2);
             this.txtModifyPassword.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtModifyPassword.Location = new System.Drawing.Point(444, 205);
+            this.txtModifyPassword.Location = new System.Drawing.Point(372, 172);
+            this.txtModifyPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtModifyPassword.Name = "txtModifyPassword";
-            this.txtModifyPassword.Size = new System.Drawing.Size(417, 35);
+            this.txtModifyPassword.Size = new System.Drawing.Size(348, 30);
             this.txtModifyPassword.TabIndex = 7;
             // 
             // btnDeleteUser
@@ -441,9 +463,10 @@ namespace Pre_Parcial_2
             this.btnDeleteUser.BackColor = System.Drawing.Color.Wheat;
             this.btnDeleteUser.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnDeleteUser.Location = new System.Drawing.Point(141, 371);
+            this.btnDeleteUser.Location = new System.Drawing.Point(119, 312);
+            this.btnDeleteUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(182, 63);
+            this.btnDeleteUser.Size = new System.Drawing.Size(152, 52);
             this.btnDeleteUser.TabIndex = 6;
             this.btnDeleteUser.Text = "Eliminar";
             this.btnDeleteUser.UseVisualStyleBackColor = false;
@@ -455,9 +478,10 @@ namespace Pre_Parcial_2
             this.btnModifyUser.BackColor = System.Drawing.Color.Wheat;
             this.btnModifyUser.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnModifyUser.Location = new System.Drawing.Point(655, 371);
+            this.btnModifyUser.Location = new System.Drawing.Point(548, 312);
+            this.btnModifyUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnModifyUser.Name = "btnModifyUser";
-            this.btnModifyUser.Size = new System.Drawing.Size(182, 63);
+            this.btnModifyUser.Size = new System.Drawing.Size(152, 52);
             this.btnModifyUser.TabIndex = 8;
             this.btnModifyUser.Text = "Modificar";
             this.btnModifyUser.UseVisualStyleBackColor = false;
@@ -467,10 +491,11 @@ namespace Pre_Parcial_2
             // 
             this.tpAdminI.BackColor = System.Drawing.Color.FloralWhite;
             this.tpAdminI.Controls.Add(this.tableLayoutPanel7);
-            this.tpAdminI.Location = new System.Drawing.Point(4, 33);
+            this.tpAdminI.Location = new System.Drawing.Point(4, 29);
+            this.tpAdminI.Margin = new System.Windows.Forms.Padding(2);
             this.tpAdminI.Name = "tpAdminI";
-            this.tpAdminI.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAdminI.Size = new System.Drawing.Size(998, 859);
+            this.tpAdminI.Padding = new System.Windows.Forms.Padding(2);
+            this.tpAdminI.Size = new System.Drawing.Size(831, 714);
             this.tpAdminI.TabIndex = 1;
             this.tpAdminI.Text = "Mantenimiento de inventario";
             // 
@@ -485,14 +510,15 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel7.Controls.Add(this.groupBox3, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.grpModifyStock, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.52052F));
             this.tableLayoutPanel7.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.47948F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(992, 853);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(827, 710);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // groupBox3
@@ -502,9 +528,11 @@ namespace Pre_Parcial_2
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Location = new System.Drawing.Point(2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(986, 442);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(823, 368);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Agregar producto";
@@ -517,11 +545,11 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel8.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.2494F));
             this.tableLayoutPanel8.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel8.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tableLayoutPanel8.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 346F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 291F));
             this.tableLayoutPanel8.Controls.Add(this.txtNameP, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.txtPrice, 1, 1);
             this.tableLayoutPanel8.Controls.Add(this.lblPrice, 0, 1);
@@ -536,7 +564,8 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel8.Controls.Add(this.txtStock, 4, 2);
             this.tableLayoutPanel8.Controls.Add(this.btnCreate, 2, 3);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 28);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(2, 23);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 5;
             this.tableLayoutPanel8.RowStyles.Add(
@@ -548,8 +577,8 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel8.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.31088F));
             this.tableLayoutPanel8.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(980, 411);
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(819, 343);
             this.tableLayoutPanel8.TabIndex = 6;
             // 
             // txtNameP
@@ -557,9 +586,10 @@ namespace Pre_Parcial_2
             this.txtNameP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNameP.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtNameP.Location = new System.Drawing.Point(132, 34);
+            this.txtNameP.Location = new System.Drawing.Point(109, 28);
+            this.txtNameP.Margin = new System.Windows.Forms.Padding(2);
             this.txtNameP.Name = "txtNameP";
-            this.txtNameP.Size = new System.Drawing.Size(286, 35);
+            this.txtNameP.Size = new System.Drawing.Size(239, 30);
             this.txtNameP.TabIndex = 2;
             // 
             // txtPrice
@@ -567,9 +597,10 @@ namespace Pre_Parcial_2
             this.txtPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPrice.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtPrice.Location = new System.Drawing.Point(132, 129);
+            this.txtPrice.Location = new System.Drawing.Point(109, 107);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(286, 35);
+            this.txtPrice.Size = new System.Drawing.Size(239, 30);
             this.txtPrice.TabIndex = 3;
             // 
             // lblPrice
@@ -577,9 +608,10 @@ namespace Pre_Parcial_2
             this.lblPrice.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblPrice.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblPrice.Location = new System.Drawing.Point(3, 128);
+            this.lblPrice.Location = new System.Drawing.Point(3, 107);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(123, 37);
+            this.lblPrice.Size = new System.Drawing.Size(102, 31);
             this.lblPrice.TabIndex = 1;
             this.lblPrice.Text = "Precio:";
             // 
@@ -588,9 +620,10 @@ namespace Pre_Parcial_2
             this.lblNameP.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblNameP.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblNameP.Location = new System.Drawing.Point(3, 33);
+            this.lblNameP.Location = new System.Drawing.Point(3, 27);
+            this.lblNameP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNameP.Name = "lblNameP";
-            this.lblNameP.Size = new System.Drawing.Size(123, 37);
+            this.lblNameP.Size = new System.Drawing.Size(102, 31);
             this.lblNameP.TabIndex = 0;
             this.lblNameP.Text = "Nombre:";
             // 
@@ -599,9 +632,10 @@ namespace Pre_Parcial_2
             this.lblDesc.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDesc.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblDesc.Location = new System.Drawing.Point(490, 33);
+            this.lblDesc.Location = new System.Drawing.Point(408, 27);
+            this.lblDesc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(140, 37);
+            this.lblDesc.Size = new System.Drawing.Size(117, 31);
             this.lblDesc.TabIndex = 6;
             this.lblDesc.Text = "Descripción: ";
             // 
@@ -610,9 +644,10 @@ namespace Pre_Parcial_2
             this.lblImg.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblImg.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblImg.Location = new System.Drawing.Point(490, 128);
+            this.lblImg.Location = new System.Drawing.Point(408, 107);
+            this.lblImg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblImg.Name = "lblImg";
-            this.lblImg.Size = new System.Drawing.Size(140, 37);
+            this.lblImg.Size = new System.Drawing.Size(117, 31);
             this.lblImg.TabIndex = 7;
             this.lblImg.Text = "Imagen: ";
             // 
@@ -621,9 +656,10 @@ namespace Pre_Parcial_2
             this.txtImg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtImg.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtImg.Location = new System.Drawing.Point(663, 129);
+            this.txtImg.Location = new System.Drawing.Point(553, 107);
+            this.txtImg.Margin = new System.Windows.Forms.Padding(2);
             this.txtImg.Name = "txtImg";
-            this.txtImg.Size = new System.Drawing.Size(287, 35);
+            this.txtImg.Size = new System.Drawing.Size(240, 30);
             this.txtImg.TabIndex = 8;
             // 
             // txtDesc
@@ -631,9 +667,10 @@ namespace Pre_Parcial_2
             this.txtDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDesc.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtDesc.Location = new System.Drawing.Point(645, 34);
+            this.txtDesc.Location = new System.Drawing.Point(538, 28);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(2);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(322, 35);
+            this.txtDesc.Size = new System.Drawing.Size(269, 30);
             this.txtDesc.TabIndex = 10;
             // 
             // cmbCategory
@@ -642,9 +679,10 @@ namespace Pre_Parcial_2
             this.cmbCategory.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(132, 210);
+            this.cmbCategory.Location = new System.Drawing.Point(109, 174);
+            this.cmbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(286, 37);
+            this.cmbCategory.Size = new System.Drawing.Size(239, 32);
             this.cmbCategory.TabIndex = 9;
             // 
             // lblCategory
@@ -652,11 +690,35 @@ namespace Pre_Parcial_2
             this.lblCategory.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCategory.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblCategory.Location = new System.Drawing.Point(3, 210);
+            this.lblCategory.Location = new System.Drawing.Point(3, 175);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(123, 37);
+            this.lblCategory.Size = new System.Drawing.Size(102, 31);
             this.lblCategory.TabIndex = 11;
             this.lblCategory.Text = "Categoría: ";
+            // 
+            // lblStock
+            // 
+            this.lblStock.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblStock.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblStock.Location = new System.Drawing.Point(408, 175);
+            this.lblStock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStock.Name = "lblStock";
+            this.lblStock.Size = new System.Drawing.Size(117, 31);
+            this.lblStock.TabIndex = 12;
+            this.lblStock.Text = "Stock: ";
+            // 
+            // txtStock
+            // 
+            this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtStock.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.txtStock.Location = new System.Drawing.Point(553, 175);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(240, 30);
+            this.txtStock.TabIndex = 13;
             // 
             // btnCreate
             // 
@@ -667,10 +729,11 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel8.SetColumnSpan(this.btnCreate, 2);
             this.btnCreate.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnCreate.Location = new System.Drawing.Point(424, 349);
+            this.btnCreate.Location = new System.Drawing.Point(352, 292);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
             this.tableLayoutPanel8.SetRowSpan(this.btnCreate, 2);
-            this.btnCreate.Size = new System.Drawing.Size(165, 59);
+            this.btnCreate.Size = new System.Drawing.Size(137, 49);
             this.btnCreate.TabIndex = 5;
             this.btnCreate.Text = "Crear";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -683,9 +746,11 @@ namespace Pre_Parcial_2
             this.grpModifyStock.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpModifyStock.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.grpModifyStock.Location = new System.Drawing.Point(3, 451);
+            this.grpModifyStock.Location = new System.Drawing.Point(2, 374);
+            this.grpModifyStock.Margin = new System.Windows.Forms.Padding(2);
             this.grpModifyStock.Name = "grpModifyStock";
-            this.grpModifyStock.Size = new System.Drawing.Size(986, 399);
+            this.grpModifyStock.Padding = new System.Windows.Forms.Padding(2);
+            this.grpModifyStock.Size = new System.Drawing.Size(823, 334);
             this.grpModifyStock.TabIndex = 1;
             this.grpModifyStock.TabStop = false;
             this.grpModifyStock.Text = "Modificar stock";
@@ -700,15 +765,16 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel9.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.40816F));
             this.tableLayoutPanel9.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
             this.tableLayoutPanel9.Controls.Add(this.cmbProducts, 2, 0);
             this.tableLayoutPanel9.Controls.Add(this.lblSelect, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.label8, 1, 1);
             this.tableLayoutPanel9.Controls.Add(this.nudStock, 2, 1);
-            this.tableLayoutPanel9.Controls.Add(this.button8, 1, 2);
-            this.tableLayoutPanel9.Controls.Add(this.button7, 1, 3);
+            this.tableLayoutPanel9.Controls.Add(this.btnModifyStock, 1, 2);
+            this.tableLayoutPanel9.Controls.Add(this.btnDeleteProduct, 1, 3);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 28);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(2, 23);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 4;
             this.tableLayoutPanel9.RowStyles.Add(
@@ -719,26 +785,29 @@ namespace Pre_Parcial_2
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.23035F));
             this.tableLayoutPanel9.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.47425F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(980, 368);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(819, 309);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
             // cmbProducts
             // 
             this.cmbProducts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbProducts.FormattingEnabled = true;
-            this.cmbProducts.Location = new System.Drawing.Point(493, 27);
+            this.cmbProducts.Location = new System.Drawing.Point(409, 20);
+            this.cmbProducts.Margin = new System.Windows.Forms.Padding(2);
             this.cmbProducts.Name = "cmbProducts";
-            this.cmbProducts.Size = new System.Drawing.Size(263, 35);
+            this.cmbProducts.Size = new System.Drawing.Size(219, 29);
             this.cmbProducts.TabIndex = 0;
+            this.cmbProducts.SelectedIndexChanged += new System.EventHandler(this.cmbProducts_SelectedIndexChanged);
             // 
             // lblSelect
             // 
             this.lblSelect.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblSelect.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblSelect.Location = new System.Drawing.Point(208, 22);
+            this.lblSelect.Location = new System.Drawing.Point(173, 19);
+            this.lblSelect.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSelect.Name = "lblSelect";
-            this.lblSelect.Size = new System.Drawing.Size(279, 37);
+            this.lblSelect.Size = new System.Drawing.Size(232, 31);
             this.lblSelect.TabIndex = 9;
             this.lblSelect.Text = "Seleccione el producto:";
             // 
@@ -749,9 +818,10 @@ namespace Pre_Parcial_2
                                                        System.Windows.Forms.AnchorStyles.Right)));
             this.label8.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label8.Location = new System.Drawing.Point(208, 108);
+            this.label8.Location = new System.Drawing.Point(173, 91);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(279, 37);
+            this.label8.Size = new System.Drawing.Size(232, 31);
             this.label8.TabIndex = 6;
             this.label8.Text = "Stock:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -759,46 +829,53 @@ namespace Pre_Parcial_2
             // nudStock
             // 
             this.nudStock.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.nudStock.Location = new System.Drawing.Point(494, 110);
+            this.nudStock.Location = new System.Drawing.Point(410, 92);
+            this.nudStock.Margin = new System.Windows.Forms.Padding(2);
+            this.nudStock.Maximum = new decimal(new int[] {20000000, 0, 0, 0});
             this.nudStock.Name = "nudStock";
-            this.nudStock.Size = new System.Drawing.Size(260, 32);
+            this.nudStock.Size = new System.Drawing.Size(217, 28);
             this.nudStock.TabIndex = 10;
             // 
-            // button8
+            // btnModifyStock
             // 
-            this.button8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button8.BackColor = System.Drawing.Color.Wheat;
-            this.tableLayoutPanel9.SetColumnSpan(this.button8, 2);
-            this.button8.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold,
+            this.btnModifyStock.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnModifyStock.BackColor = System.Drawing.Color.Wheat;
+            this.tableLayoutPanel9.SetColumnSpan(this.btnModifyStock, 2);
+            this.btnModifyStock.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button8.Location = new System.Drawing.Point(401, 214);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(162, 56);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Modificar";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnModifyStock.Location = new System.Drawing.Point(332, 181);
+            this.btnModifyStock.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModifyStock.Name = "btnModifyStock";
+            this.btnModifyStock.Size = new System.Drawing.Size(135, 47);
+            this.btnModifyStock.TabIndex = 8;
+            this.btnModifyStock.Text = "Modificar";
+            this.btnModifyStock.UseVisualStyleBackColor = false;
+            this.btnModifyStock.Click += new System.EventHandler(this.btnModifyStock_Click);
             // 
-            // button7
+            // btnDeleteProduct
             // 
-            this.button7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button7.BackColor = System.Drawing.Color.Wheat;
-            this.tableLayoutPanel9.SetColumnSpan(this.button7, 2);
-            this.button7.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold,
+            this.btnDeleteProduct.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDeleteProduct.BackColor = System.Drawing.Color.Wheat;
+            this.tableLayoutPanel9.SetColumnSpan(this.btnDeleteProduct, 2);
+            this.btnDeleteProduct.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button7.Location = new System.Drawing.Point(342, 309);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(279, 56);
-            this.button7.TabIndex = 6;
-            this.button7.Text = " Eliminar producto";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnDeleteProduct.Location = new System.Drawing.Point(284, 260);
+            this.btnDeleteProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteProduct.Name = "btnDeleteProduct";
+            this.btnDeleteProduct.Size = new System.Drawing.Size(232, 47);
+            this.btnDeleteProduct.TabIndex = 6;
+            this.btnDeleteProduct.Text = " Eliminar producto";
+            this.btnDeleteProduct.UseVisualStyleBackColor = false;
+            this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
             // 
             // tpAdminP
             // 
             this.tpAdminP.BackColor = System.Drawing.Color.FloralWhite;
             this.tpAdminP.Controls.Add(this.tableLayoutPanel3);
-            this.tpAdminP.Location = new System.Drawing.Point(4, 33);
+            this.tpAdminP.Location = new System.Drawing.Point(4, 29);
+            this.tpAdminP.Margin = new System.Windows.Forms.Padding(2);
             this.tpAdminP.Name = "tpAdminP";
-            this.tpAdminP.Size = new System.Drawing.Size(998, 859);
+            this.tpAdminP.Size = new System.Drawing.Size(831, 714);
             this.tpAdminP.TabIndex = 2;
             this.tpAdminP.Text = "Historial de pedidos";
             // 
@@ -812,7 +889,7 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel3.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.26374F));
             this.tableLayoutPanel3.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 242F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
             this.tableLayoutPanel3.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.Controls.Add(this.dvgOrdersHistory1, 1, 1);
@@ -821,6 +898,7 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel3.Controls.Add(this.lblIDPedido, 1, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(
@@ -830,22 +908,27 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel3.RowStyles.Add(
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.89904F));
             this.tableLayoutPanel3.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(998, 859);
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(831, 714);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // dvgOrdersHistory1
             // 
+            this.dvgOrdersHistory1.AllowUserToAddRows = false;
+            this.dvgOrdersHistory1.AllowUserToDeleteRows = false;
+            this.dvgOrdersHistory1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgOrdersHistory1.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dvgOrdersHistory1.ColumnHeadersHeightSizeMode =
                 System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel3.SetColumnSpan(this.dvgOrdersHistory1, 3);
             this.dvgOrdersHistory1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvgOrdersHistory1.GridColor = System.Drawing.Color.FloralWhite;
-            this.dvgOrdersHistory1.Location = new System.Drawing.Point(20, 17);
+            this.dvgOrdersHistory1.Location = new System.Drawing.Point(16, 13);
+            this.dvgOrdersHistory1.Margin = new System.Windows.Forms.Padding(2);
             this.dvgOrdersHistory1.Name = "dvgOrdersHistory1";
+            this.dvgOrdersHistory1.ReadOnly = true;
             this.dvgOrdersHistory1.RowTemplate.Height = 28;
-            this.dvgOrdersHistory1.Size = new System.Drawing.Size(944, 719);
+            this.dvgOrdersHistory1.Size = new System.Drawing.Size(782, 598);
             this.dvgOrdersHistory1.TabIndex = 0;
             // 
             // btnViewDetails
@@ -854,9 +937,10 @@ namespace Pre_Parcial_2
             this.btnViewDetails.BackColor = System.Drawing.Color.Wheat;
             this.btnViewDetails.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnViewDetails.Location = new System.Drawing.Point(768, 761);
+            this.btnViewDetails.Location = new System.Drawing.Point(635, 631);
+            this.btnViewDetails.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewDetails.Name = "btnViewDetails";
-            this.btnViewDetails.Size = new System.Drawing.Size(196, 55);
+            this.btnViewDetails.Size = new System.Drawing.Size(163, 46);
             this.btnViewDetails.TabIndex = 1;
             this.btnViewDetails.Text = "Ver detalles";
             this.btnViewDetails.UseVisualStyleBackColor = false;
@@ -865,9 +949,10 @@ namespace Pre_Parcial_2
             // nudNumPedido
             // 
             this.nudNumPedido.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudNumPedido.Location = new System.Drawing.Point(513, 773);
+            this.nudNumPedido.Location = new System.Drawing.Point(423, 641);
+            this.nudNumPedido.Margin = new System.Windows.Forms.Padding(2);
             this.nudNumPedido.Name = "nudNumPedido";
-            this.nudNumPedido.Size = new System.Drawing.Size(160, 30);
+            this.nudNumPedido.Size = new System.Drawing.Size(133, 26);
             this.nudNumPedido.TabIndex = 2;
             // 
             // lblIDPedido
@@ -875,9 +960,10 @@ namespace Pre_Parcial_2
             this.lblIDPedido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIDPedido.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblIDPedido.Location = new System.Drawing.Point(73, 769);
+            this.lblIDPedido.Location = new System.Drawing.Point(59, 638);
+            this.lblIDPedido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIDPedido.Name = "lblIDPedido";
-            this.lblIDPedido.Size = new System.Drawing.Size(333, 39);
+            this.lblIDPedido.Size = new System.Drawing.Size(277, 32);
             this.lblIDPedido.TabIndex = 3;
             this.lblIDPedido.Text = "Ingrese ID de pedido: ";
             this.lblIDPedido.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -962,7 +1048,7 @@ namespace Pre_Parcial_2
             this.nudIdPedido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudIdPedido.Location = new System.Drawing.Point(-38, 679);
             this.nudIdPedido.Name = "nudIdPedido";
-            this.nudIdPedido.Size = new System.Drawing.Size(1, 26);
+            this.nudIdPedido.Size = new System.Drawing.Size(1, 22);
             this.nudIdPedido.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -1023,7 +1109,7 @@ namespace Pre_Parcial_2
             this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numericUpDown1.Location = new System.Drawing.Point(-38, 679);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(1, 26);
+            this.numericUpDown1.Size = new System.Drawing.Size(1, 22);
             this.numericUpDown1.TabIndex = 2;
             // 
             // tableLayoutPanel4
@@ -1076,7 +1162,7 @@ namespace Pre_Parcial_2
             this.tableLayoutPanel5.Controls.Add(this.checkBox1, 1, 2);
             this.tableLayoutPanel5.Controls.Add(this.button3, 1, 3);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 28);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 24);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 4;
             this.tableLayoutPanel5.RowStyles.Add(
@@ -1097,7 +1183,7 @@ namespace Pre_Parcial_2
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBox1.Location = new System.Drawing.Point(56, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(90, 35);
+            this.textBox1.Size = new System.Drawing.Size(90, 30);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
@@ -1107,7 +1193,7 @@ namespace Pre_Parcial_2
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBox2.Location = new System.Drawing.Point(56, 3);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(90, 35);
+            this.textBox2.Size = new System.Drawing.Size(90, 30);
             this.textBox2.TabIndex = 3;
             // 
             // label1
@@ -1188,7 +1274,7 @@ namespace Pre_Parcial_2
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBox3.Location = new System.Drawing.Point(65, 116);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(120, 35);
+            this.textBox3.Size = new System.Drawing.Size(120, 30);
             this.textBox3.TabIndex = 6;
             // 
             // label3
@@ -1219,7 +1305,7 @@ namespace Pre_Parcial_2
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(65, 30);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(56, 28);
+            this.comboBox1.Size = new System.Drawing.Size(56, 25);
             this.comboBox1.TabIndex = 0;
             // 
             // textBox4
@@ -1229,7 +1315,7 @@ namespace Pre_Parcial_2
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.textBox4.Location = new System.Drawing.Point(65, 205);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(120, 35);
+            this.textBox4.Size = new System.Drawing.Size(120, 30);
             this.textBox4.TabIndex = 7;
             // 
             // button4
@@ -1258,42 +1344,22 @@ namespace Pre_Parcial_2
             this.button5.Text = "Modificar";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // lblStock
-            // 
-            this.lblStock.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblStock.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblStock.Location = new System.Drawing.Point(490, 210);
-            this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(140, 37);
-            this.lblStock.TabIndex = 12;
-            this.lblStock.Text = "Stock: ";
-            // 
-            // txtStock
-            // 
-            this.txtStock.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtStock.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtStock.Location = new System.Drawing.Point(663, 211);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(287, 35);
-            this.txtStock.TabIndex = 13;
-            // 
             // AdminUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::Pre_Parcial_2.Properties.Resources.Back;
-            this.ClientSize = new System.Drawing.Size(1059, 946);
+            this.ClientSize = new System.Drawing.Size(882, 788);
             this.Controls.Add(this.tlpTabCtrl);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
             this.Name = "AdminUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TSR - Usuario administrador";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminUser_FormClosed);
             this.Load += new System.EventHandler(this.AdminUser_Load);
             this.tlpTabCtrl.ResumeLayout(false);
             this.tabAdmin.ResumeLayout(false);
@@ -1387,8 +1453,6 @@ namespace Pre_Parcial_2
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
@@ -1411,5 +1475,7 @@ namespace Pre_Parcial_2
         private System.Windows.Forms.NumericUpDown nudStock;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.Button btnModifyStock;
+        private System.Windows.Forms.Button btnDeleteProduct;
     }
 }

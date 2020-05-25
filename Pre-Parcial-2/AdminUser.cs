@@ -27,7 +27,7 @@ namespace Pre_Parcial_2
                 {
                     UsuarioDAO.InsertUser(usuario);
                     MessageBox.Show("Usuario creado exitosamente.");
-                    RefreshControls();
+                    RefreshUserControls();
                 }
                 catch (Exception exception)
                 {
@@ -39,8 +39,8 @@ namespace Pre_Parcial_2
         }
         private void AdminUser_Load(object sender, EventArgs e)
         {
-            RefreshControls();
-            RefreshControlsProducts();
+            RefreshUserControls();
+            RefreshProductsControls();
             dvgOrdersHistory1.DataSource = PedidoDAO.ViewOrdersHistory();
                String[] categories;
                categories = new string[6];
@@ -53,7 +53,7 @@ namespace Pre_Parcial_2
                cmbCategory.DataSource = categories;
         }
         
-        private void RefreshControls()
+        private void RefreshUserControls()
         {
             cmbUsers.DataSource = null;
             cmbUsers.ValueMember = "Nombre";
@@ -61,12 +61,12 @@ namespace Pre_Parcial_2
             cmbUsers.DataSource = UsuarioDAO.getUsers();
         }
         
-        private void RefreshControlsProducts()
+        private void RefreshProductsControls()
         {
             cmbProducts.DataSource = null;
             cmbProducts.ValueMember = "Nombre";
             cmbProducts.DisplayMember = "Nombre";
-            cmbProducts.DataSource = InventarioDAO.getInventory();
+            cmbProducts.DataSource = InventarioDAO.GetInventory();
         }        
 
         private void cmbUsers_SelectedIndexChanged(object sender, EventArgs e)
@@ -96,7 +96,7 @@ namespace Pre_Parcial_2
                         == DialogResult.Yes)
                     {
                         UsuarioDAO.ModifyUser(modifyUser,((Usuario)cmbUsers.SelectedItem).Nombre);
-                        RefreshControls();
+                        RefreshUserControls();
                         MessageBox.Show("El usuario ha sido modificado con éxito.","Tienda San Ronaldo");
                         
                     }
@@ -128,7 +128,7 @@ namespace Pre_Parcial_2
                         == DialogResult.Yes)
                     {
                         UsuarioDAO.DeleteUser(deleteUser);
-                        RefreshControls();
+                        RefreshUserControls();
                         MessageBox.Show("El usuario ha sido eliminado con éxito.", "Tienda San Ronaldo");
                     }
                 }
@@ -163,22 +163,71 @@ namespace Pre_Parcial_2
                 product.Precio = Convert.ToDouble(txtPrice.Text);
                 product.Categoria = cmbCategory.SelectedItem.ToString();
                 product.Stock = Convert.ToInt32(txtStock.Text);
-                product.Imagen = txtImg.Text;                
+                product.Imagen = txtImg.Text;
                 try
                 {
                     InventarioDAO.InsertProduct(product);
                     MessageBox.Show("Nuevo producto agregado exitosamente.");
-                    RefreshControlsProducts();
+                    RefreshProductsControls();
                 }
                 catch (Exception exception)
                 {
-                    MessageBox.Show("Ha ocurrido un error, revise los campos.", "Tienda San Ronaldo", MessageBoxButtons.OK,
+                    MessageBox.Show("Ha ocurrido un error, revise los campos.", "Tienda San Ronaldo",
+                        MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
-               }
-                
+                }
             }
         }
 
-       
+
+        private void AdminUser_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
+
+        private void btnModifyStock_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Inventario selectedProduct = (Inventario) cmbProducts.SelectedItem;
+                InventarioDAO.ModifyInventory(selectedProduct,(int) nudStock.Value);
+                MessageBox.Show($"El stock de {selectedProduct.Nombre} ha sido modificado con éxito.");
+                RefreshProductsControls();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Ha ocurrido un error.", "Tienda San Ronaldo", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+        }
+
+        private void cmbProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Inventario currentProduct = (Inventario) cmbProducts.SelectedItem;
+            nudStock.Value = currentProduct.Stock;
+        }
+
+        private void btnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            Inventario currentProduct = (Inventario) cmbProducts.SelectedItem;
+            if (MessageBox.Show($"¿Está seguro que desea eliminar el producto {currentProduct.Nombre}?",
+                "Tienda San Ronaldo",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                
+                    InventarioDAO.DeleteProduct(currentProduct);
+                    MessageBox.Show($"El producto \"{currentProduct.Nombre}\" ha sido eliminado con éxito.","Tienda San Ronaldo",
+                        MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    RefreshProductsControls();   
+                
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show("Ha ocurrido un error.", "Tienda San Ronaldo", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+            }
+        }
+    }
     }

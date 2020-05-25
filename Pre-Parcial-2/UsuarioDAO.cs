@@ -15,6 +15,19 @@ namespace Pre_Parcial_2
             DBConnection.ExecuteNonQuery(querySQL);
         }
 
+        public static Usuario verifyUser(String name, String password)
+        {
+            Usuario user = new Usuario();
+            String query = $"SELECT * FROM USUARIO " +
+                           $"WHERE nombre = '{name}' AND " +
+                           $"contrasena = '{password}'; ";
+            DataTable resultTable = DBConnection.ExecuteQuery(query);
+            user.Nombre = resultTable.Rows[0][0].ToString();
+            user.Contraseña = resultTable.Rows[0][1].ToString();
+            user.EsAdmin = Convert.ToBoolean(resultTable.Rows[0][2].ToString());
+            return user;
+        }
+
         public static List<Usuario> getUsers()
         {
             String query = "SELECT * FROM USUARIO;";

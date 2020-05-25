@@ -19,10 +19,28 @@ namespace Pre_Parcial_2
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-           NormalUser normal = new NormalUser();
-           normal.Show();
-            AdminUser admin = new AdminUser();
-            admin.Show();
+            try
+            {
+                Usuario loginUser = UsuarioDAO.verifyUser(txtName.Text, txtPassword.Text);
+                if (loginUser.EsAdmin)
+                {
+                    AdminUser admin = new AdminUser(); 
+                    admin.Show();   
+                }
+                else
+                {
+                    NormalUser normal = new NormalUser(loginUser); 
+                    normal.Show();
+                }
+                Hide();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("El usuario no ha sido encontrado. Verifique las credenciales.", "Tienda San Ronaldo",
+                    MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                txtName.Clear();
+                txtPassword.Clear();
+            } 
         }
     }
 }
