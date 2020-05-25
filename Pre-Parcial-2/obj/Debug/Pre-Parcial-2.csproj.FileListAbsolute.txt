@@ -34,7 +34,6 @@ C:\Users\user\Desktop\PreParcial2\PreParcialPOO\Pre-Parcial-2\obj\Debug\Pre_Parc
 C:\Users\user\Desktop\PreParcial2\PreParcialPOO\Pre-Parcial-2\obj\Debug\Pre-Parcial-2.csproj.CopyComplete
 C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre-Parcial-2.csprojAssemblyReference.cache
 C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.exe.config
-C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.AdminUser.resources
 C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.Form1.resources
 C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.NormalUser.resources
 C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.Properties.Resources.resources
@@ -69,3 +68,4 @@ C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\
 C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.dll
 C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.pdb
 C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.xml
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.AdminUser.resources
