@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace Pre_Parcial_2
 {
@@ -10,11 +11,11 @@ namespace Pre_Parcial_2
         public double Precio { get; set; }
         public String Categoria { get; set; }
         public int Stock { get; set; }
-        public String Imagen { get; set; }
+        public Image Imagen { get; set; }
         
         public Inventario(){}
 
-        public Inventario(int idProducto, string nombre, string descripcion, double precio, string categoria, int stock, string imagen)
+        public Inventario(int idProducto, string nombre, string descripcion, double precio, string categoria, int stock, Image imagen)
         {
             IdProducto = idProducto;
             Nombre = nombre;

@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Windows.Forms;
+using Pre_Parcial_2.Properties;
 
 namespace Pre_Parcial_2
 {
@@ -42,7 +46,7 @@ namespace Pre_Parcial_2
             RefreshUserControls();
             RefreshProductsControls();
             dvgOrdersHistory1.DataSource = PedidoDAO.ViewOrdersHistory();
-               String[] categories;
+            String[] categories;
                categories = new string[6];
                categories[0] = "Bebidas";
                categories[1] = "Boquitas";
@@ -50,7 +54,9 @@ namespace Pre_Parcial_2
                categories[3] = "Frutas y verduras";
                categories[4] = "Lácteos";
                categories[5] = "Desechables";
-               cmbCategory.DataSource = categories;
+            cmbCategory.DataSource = categories;
+            ofdImage.ShowDialog();
+
         }
         
         private void RefreshUserControls()
@@ -151,10 +157,9 @@ namespace Pre_Parcial_2
             if (txtNameP.Text.Equals("")||
                 txtDesc.Text.Equals("")||
                 txtPrice.Text.Equals("")||
-                txtImg.Text.Equals("")||
-                cmbCategory.SelectedItem.ToString().Equals(""))
+                btnSelectImage.Text.Equals("Seleccionar imagen"))
             {
-                MessageBox.Show("Debe llenar los campos.", "Tienda San Ronaldo", MessageBoxButtons.OK,
+                MessageBox.Show("Debe llenar los campos e incluir imagen.", "Tienda San Ronaldo", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }else
             { 
@@ -164,7 +169,7 @@ namespace Pre_Parcial_2
                 product.Precio = Convert.ToDouble(txtPrice.Text);
                 product.Categoria = cmbCategory.SelectedItem.ToString();
                 product.Stock = Convert.ToInt32(txtStock.Text);
-                product.Imagen = txtImg.Text;
+                product.Imagen = Image.FromFile(ofdImage.FileName);
                 try
                 {
                     InventarioDAO.InsertProduct(product);
@@ -228,6 +233,14 @@ namespace Pre_Parcial_2
                     MessageBox.Show("Ha ocurrido un error.", "Tienda San Ronaldo", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                 }
+            }
+        }
+
+        private void btnSelectImage_Click(object sender, EventArgs e)
+        {
+            if (ofdImage.ShowDialog() == DialogResult.OK)
+            {
+                btnSelectImage.Text = ofdImage.SafeFileName;
             }
         }
     }
