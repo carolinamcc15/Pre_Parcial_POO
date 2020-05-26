@@ -55,8 +55,6 @@ namespace Pre_Parcial_2
                categories[4] = "Lácteos";
                categories[5] = "Desechables";
             cmbCategory.DataSource = categories;
-            ofdImage.ShowDialog();
-
         }
         
         private void RefreshUserControls()
@@ -156,8 +154,7 @@ namespace Pre_Parcial_2
         {
             if (txtNameP.Text.Equals("")||
                 txtDesc.Text.Equals("")||
-                txtPrice.Text.Equals("")||
-                btnSelectImage.Text.Equals("Seleccionar imagen"))
+                txtPrice.Text.Equals(""))
             {
                 MessageBox.Show("Debe llenar los campos e incluir imagen.", "Tienda San Ronaldo", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
@@ -169,7 +166,6 @@ namespace Pre_Parcial_2
                 product.Precio = Convert.ToDouble(txtPrice.Text);
                 product.Categoria = cmbCategory.SelectedItem.ToString();
                 product.Stock = Convert.ToInt32(txtStock.Text);
-                product.Imagen = Image.FromFile(ofdImage.FileName);
                 try
                 {
                     InventarioDAO.InsertProduct(product);
@@ -236,12 +232,10 @@ namespace Pre_Parcial_2
             }
         }
 
-        private void btnSelectImage_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            if (ofdImage.ShowDialog() == DialogResult.OK)
-            {
-                btnSelectImage.Text = ofdImage.SafeFileName;
-            }
+            dvgOrdersHistory1.DataSource = null;
+            dvgOrdersHistory1.DataSource = PedidoDAO.ViewOrdersHistory();
         }
     }
     }

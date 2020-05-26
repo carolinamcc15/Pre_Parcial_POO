@@ -44,5 +44,11 @@ namespace Pre_Parcial_2
         {
             Application.Exit();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            dgvOrdersHistory.DataSource = null;
+            dgvOrdersHistory.DataSource = PedidoDAO.ViewUserOrdersHistory(user);
+        }
     }
 }

@@ -12,16 +12,13 @@ namespace Pre_Parcial_2
     {
         public static void InsertProduct(Inventario inventario)
         {
-            MemoryStream ms = new MemoryStream();
-            inventario.Imagen.Save(ms, ImageFormat.Jpeg);
-            byte[] binaryImage = ms.ToArray();
-            String querySql = $"INSERT INTO INVENTARIO (nombre, descripcion, precio, categoria, stock, imagen) " +
+            String querySql = $"INSERT INTO INVENTARIO (nombre, descripcion, precio, categoria, stock) " +
                               $" VALUES ('{inventario.Nombre}'," +
                               $"'{inventario.Descripcion}'," +
                               $"{inventario.Precio:0.##}, " +
                               $"'{inventario.Categoria}', " +
-                              $"{inventario.Stock}, " +
-                              $"'{binaryImage}');";
+                              $"{inventario.Stock});"; 
+                            
             DBConnection.ExecuteNonQuery(querySql);
         }
         
@@ -39,7 +36,6 @@ namespace Pre_Parcial_2
                 inventarioAux.Precio = Convert.ToDouble(fila[3].ToString());
                 inventarioAux.Categoria = fila[4].ToString();
                 inventarioAux.Stock = Convert.ToInt32(fila[5].ToString());
-                inventarioAux.Imagen = new Bitmap(new MemoryStream(Encoding.ASCII.GetBytes(fila[6].ToString()))); ;
                 listaProductos.Add(inventarioAux);
             }
             return listaProductos;
