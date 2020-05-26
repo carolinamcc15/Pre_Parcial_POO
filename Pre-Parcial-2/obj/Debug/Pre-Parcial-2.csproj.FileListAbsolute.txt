@@ -106,3 +106,9 @@ C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre-Parcial
 C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre-Parcial-2.csproj.CopyComplete
 C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.exe
 C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\obj\Debug\Pre_Parcial_2.pdb
+C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.Wpf.xml

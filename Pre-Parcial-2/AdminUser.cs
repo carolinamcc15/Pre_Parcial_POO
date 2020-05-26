@@ -1,60 +1,92 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
+using LiveCharts;
+using LiveCharts.Wpf;
 using Pre_Parcial_2.Properties;
+using CartesianChart = LiveCharts.WinForms.CartesianChart;
+using PieChart = LiveCharts.WinForms.PieChart;
 
 namespace Pre_Parcial_2
 {
     public partial class AdminUser : Form
     {
+        private PieChart pieGraphic;
+        private CartesianChart columnGraphic;
         public AdminUser()
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (txtName.Text.Equals("")||
-                txtPassword.Text.Equals(""))
-            {
-                MessageBox.Show("Debe llenar los campos.", "Tienda San Ronaldo", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }else
-            { 
-                Usuario usuario = new Usuario();
-                usuario.Nombre = txtName.Text;
-                usuario.Contraseña = txtPassword.Text;
-                usuario.EsAdmin = chkAdmin.Checked;
-                try
-                {
-                    UsuarioDAO.InsertUser(usuario);
-                    MessageBox.Show("Usuario creado exitosamente.");
-                    RefreshUserControls();
-                }
-                catch (Exception exception)
-                {
-                    MessageBox.Show("Ha ocurrido un error, revise los campos.", "Tienda San Ronaldo", MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning);
-                }
-                
-            }
-        }
+        
         private void AdminUser_Load(object sender, EventArgs e)
         {
             RefreshUserControls();
             RefreshProductsControls();
             dvgOrdersHistory1.DataSource = PedidoDAO.ViewOrdersHistory();
             String[] categories;
-               categories = new string[6];
-               categories[0] = "Bebidas";
-               categories[1] = "Boquitas";
-               categories[2] = "Despensa";
-               categories[3] = "Frutas y verduras";
-               categories[4] = "Lácteos";
-               categories[5] = "Desechables";
+            categories = new string[6];
+            categories[0] = "Bebidas";
+            categories[1] = "Boquitas";
+            categories[2] = "Despensa";
+            categories[3] = "Frutas y verduras";
+            categories[4] = "Lácteos";
+            categories[5] = "Desechables";
             cmbCategory.DataSource = categories;
+            //Gráfico de pastel
+            pieGraphic = new PieChart();
+            Controls.Add(pieGraphic);
+            pieGraphic.Parent = tabAdmin.TabPages[3];
+            pieGraphic.Top = 10;
+            pieGraphic.Left = 10;
+            pieGraphic.Width = pieGraphic.Parent.Width - 20;
+            pieGraphic.Height = pieGraphic.Parent.Height - 20;
+            UpdatePieGraphic();
+            //Gráfico de columnas
+            columnGraphic = new CartesianChart();
+            Controls.Add(columnGraphic);
+            columnGraphic.Parent = tabAdmin.TabPages[4];
+            columnGraphic.Top = 10;
+            columnGraphic.Left = 10;
+            columnGraphic.Width = columnGraphic.Parent.Width - 20;
+            columnGraphic.Height = columnGraphic.Parent.Height - 20;
+            UpdateColumnGraphic();
+        }
+        private void UpdatePieGraphic()
+        {
+            pieGraphic.Series = null;
+            SeriesCollection collection = new SeriesCollection();
+            DataTable dataTable= InventarioDAO.getSumByCategory();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                collection.Add(new PieSeries{Title = row[0].ToString(), Values = new ChartValues<int>{Convert.ToInt32(row[1].ToString())}, DataLabels = true});
+            }
+            pieGraphic.Series = collection;
+            pieGraphic.LegendLocation = LegendLocation.Bottom;
+        }
+
+        private void UpdateColumnGraphic()
+        {
+            columnGraphic.Series = null;
+            columnGraphic.AxisX = new AxesCollection();
+            columnGraphic.BackColor = Color.FloralWhite;
+            columnGraphic.Series= new SeriesCollection
+            {
+                new ColumnSeries() {Title = "Productos con mayor stock", Values = new ChartValues<int>{}}
+            };
+            columnGraphic.LegendLocation = LegendLocation.Top;
+            columnGraphic.AxisX.Add(new Axis {Labels = new List<string>()});
+            columnGraphic.AxisX[0].Separator = new Separator(){Step = 1, IsEnabled = false};
+            columnGraphic.AxisX[0].LabelsRotation = 15;
+            // Poblado de datos
+            foreach (DataRow row in InventarioDAO.getTopFiveStocks().Rows)
+            {
+                columnGraphic.Series[0].Values.Add(Convert.ToInt32(row[1]));
+                columnGraphic.AxisX[0].Labels.Add(row[0].ToString());
+            }
         }
         
         private void RefreshUserControls()
@@ -156,7 +188,7 @@ namespace Pre_Parcial_2
                 txtDesc.Text.Equals("")||
                 txtPrice.Text.Equals(""))
             {
-                MessageBox.Show("Debe llenar los campos e incluir imagen.", "Tienda San Ronaldo", MessageBoxButtons.OK,
+                MessageBox.Show("Debe llenar los campos.", "Tienda San Ronaldo", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }else
             { 
@@ -170,6 +202,8 @@ namespace Pre_Parcial_2
                 {
                     InventarioDAO.InsertProduct(product);
                     MessageBox.Show("Nuevo producto agregado exitosamente.");
+                    UpdatePieGraphic();
+                    UpdateColumnGraphic();
                     RefreshProductsControls();
                 }
                 catch (Exception exception)
@@ -195,6 +229,8 @@ namespace Pre_Parcial_2
                 InventarioDAO.ModifyInventory(selectedProduct,(int) nudStock.Value);
                 MessageBox.Show($"El stock de {selectedProduct.Nombre} ha sido modificado con éxito.");
                 RefreshProductsControls();
+                UpdatePieGraphic();
+                UpdateColumnGraphic();
             }
             catch (Exception exception)
             {
@@ -221,7 +257,9 @@ namespace Pre_Parcial_2
                     InventarioDAO.DeleteProduct(currentProduct);
                     MessageBox.Show($"El producto \"{currentProduct.Nombre}\" ha sido eliminado con éxito.","Tienda San Ronaldo",
                         MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    RefreshProductsControls();   
+                    UpdatePieGraphic();
+                    RefreshProductsControls();
+                    UpdateColumnGraphic();
                 
                 }
                 catch (Exception exception)
@@ -236,6 +274,34 @@ namespace Pre_Parcial_2
         {
             dvgOrdersHistory1.DataSource = null;
             dvgOrdersHistory1.DataSource = PedidoDAO.ViewOrdersHistory();
+        }
+
+        private void btnCreateUser_Click(object sender, EventArgs e)
+        {
+            if (txtName.Text.Equals("")||
+                txtPassword.Text.Equals(""))
+            {
+                MessageBox.Show("Debe llenar los campos.", "Tienda San Ronaldo", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }else
+            { 
+                Usuario usuario = new Usuario();
+                usuario.Nombre = txtName.Text;
+                usuario.Contraseña = txtPassword.Text;
+                usuario.EsAdmin = chkAdmin.Checked;
+                try
+                {
+                    UsuarioDAO.InsertUser(usuario);
+                    MessageBox.Show("Usuario creado exitosamente.");
+                    RefreshUserControls();
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show("Ha ocurrido un error, revise los campos.", "Tienda San Ronaldo", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+                
+            }
         }
     }
     }

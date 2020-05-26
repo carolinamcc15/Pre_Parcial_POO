@@ -5,6 +5,8 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Text;
+using LiveCharts;
+using LiveCharts.Wpf;
 
 namespace Pre_Parcial_2
 {
@@ -53,6 +55,21 @@ namespace Pre_Parcial_2
         {
             String querySql = $"DELETE FROM INVENTARIO WHERE idproducto = {inv.IdProducto};";
             DBConnection.ExecuteNonQuery(querySql);
+        }
+
+        public static DataTable getSumByCategory()
+        {
+            String querySql = "select categoria, sum(stock) from inventario group by categoria;";
+            DataTable dataTable = DBConnection.ExecuteQuery(querySql);
+            return dataTable;
+        }
+
+        public static DataTable getTopFiveStocks()
+        {
+            String sqlQuery = "SELECT nombre, stock FROM INVENTARIO ORDER BY stock DESC"+ 
+            " FETCH FIRST 5 ROWS ONLY;";
+            DataTable dataTable = DBConnection.ExecuteQuery(sqlQuery);
+            return dataTable;
         }
     }
 }
