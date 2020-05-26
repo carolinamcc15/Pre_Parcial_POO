@@ -1,0 +1,76 @@
+CREATE TABLE USUARIO
+(
+	nombre VARCHAR(30) PRIMARY KEY,
+	contrasena VARCHAR(30) NOT NULL,
+	administrador BOOLEAN NOT NULL
+);
+
+CREATE TABLE INVENTARIO
+(
+	idproducto SERIAL PRIMARY KEY,
+	nombre VARCHAR(30) NOT NULL,
+	descripcion VARCHAR(100) NOT NULL,
+	precio DOUBLE PRECISION NOT NULL,
+	categoria VARCHAR(30) NOT NULL,
+	stock INT NOT NULL
+);
+
+CREATE TABLE PEDIDO
+(
+	numPedido SERIAL PRIMARY KEY,
+	fechaCompra DATE NOT NULL DEFAULT now(),
+	nombre VARCHAR(30) NOT NULL,
+	CONSTRAINT fk_nombre FOREIGN KEY (nombre) 
+	REFERENCES USUARIO(nombre)
+);
+
+CREATE TABLE DETALLE_PEDIDO
+(
+	numDetalle SERIAL PRIMARY KEY,
+	numPedido INT NOT NULL,
+	idProducto INT NOT NULL,
+	cantProducto INT NOT NULL,
+	precioVenta DOUBLE PRECISION NOT NULL,
+	CONSTRAINT fk_numPedido FOREIGN KEY (numPedido) 
+	REFERENCES PEDIDO(numPedido),
+	CONSTRAINT fk_idProducto FOREIGN KEY (idProducto) 
+	REFERENCES INVENTARIO(idProducto)
+);
+
+INSERT INTO USUARIO VALUES
+('Ronaldo','Dios',true),
+('Nestor','Nieto',false),
+('Carolina','Carranza',false);
+
+INSERT INTO INVENTARIO(nombre,descripcion,precio,categoria,stock) VALUES
+('Coca-Cola', 'Botella de Coca-Cola de 1.5 litros', 1.50, 'Bebidas', 25),
+('Churritos Diana', 'Bolsa pequeña de churritos Diana', 0.15, 'Boquitas', 50),
+('Aceite Mazola', 'Bolsa mediana de aceite marca Mazola', 1.10, 'Despensa', 16),
+('Papas Lays clásicas', 'Bolsa pequeña de papas Lays clásicas', 0.50, 'Boquitas', 10),
+('Agua Cristal embotellada', 'Agua embotellada marca Cristal de 600 ml', 0.50, 'Bebidas', 25),
+('Pan de caja Lido', 'Bolsa de pan blanco de caja marca Lido tamaño mediano', 1.30, 'Despensa', 13),
+('Libra de papas', 'Libra de papa amarilla', 0.65, 'Frutas y verduras', 8),
+('Libra de guineo', 'Libra de guineo de seda', 0.50, 'Frutas y verduras', 14);
+
+INSERT INTO PEDIDO(nombre) VALUES ('Nestor');
+INSERT INTO DETALLE_PEDIDO(numpedido,idproducto,cantproducto,precioventa)
+VALUES (1,1,1,ROUND(CAST((SELECT precio FROM inventario WHERE idproducto = 1)*1.1 AS NUMERIC) ,2)),
+(1,2,2,ROUND(CAST((SELECT precio FROM inventario WHERE idproducto = 2)*1.1 AS NUMERIC) ,2));
+
+
+INSERT INTO PEDIDO(nombre) VALUES ('Carolina');
+INSERT INTO DETALLE_PEDIDO(numpedido,idproducto,cantproducto,precioventa)
+VALUES (2,3,1,ROUND(CAST((SELECT precio FROM inventario WHERE idproducto = 3)*1.1 AS NUMERIC) ,2)),
+(2,4,2,ROUND(CAST((SELECT precio FROM inventario WHERE idproducto = 4)*1.1 AS NUMERIC) ,2));
+
+Delete from detalle_pedido
+INSERT INTO PEDIDO(nombre) VALUES ('Nestor');
+INSERT INTO DETALLE_PEDIDO(numpedido,idproducto,cantproducto,precioventa)
+VALUES (3,5,1,ROUND(CAST((SELECT precio FROM inventario WHERE idproducto = 5)*1.1 AS NUMERIC) ,2)),
+(3,6,2,ROUND(CAST((SELECT precio FROM inventario WHERE idproducto = 6)*1.1 AS NUMERIC) ,2));
+
+
+INSERT INTO PEDIDO(nombre) VALUES ('Carolina');
+INSERT INTO DETALLE_PEDIDO(numpedido,idproducto,cantproducto,precioventa)
+VALUES (4,7,1,ROUND(CAST((SELECT precio FROM inventario WHERE idproducto = 7)*1.1 AS NUMERIC) ,2)),
+(4,8,2,ROUND(CAST((SELECT precio FROM inventario WHERE idproducto = 8)*1.1 AS NUMERIC) ,2));

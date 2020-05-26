@@ -11,14 +11,17 @@ namespace Pre_Parcial_2
         public List<Inventario> Productos { get; set; }
         public double Total { get; set; }
 
-        public Pedido(){}
+        public Pedido()
+        {
+            Productos = new List<Inventario>();
+        }
 
-        public Pedido(int numPedido, DateTime fechaCompra, string nombreComprador, List<Inventario> productos, double total)
+        public Pedido(int numPedido, DateTime fechaCompra, string nombreComprador, double total)
         {
             NumPedido = numPedido;
             FechaCompra = fechaCompra;
             NombreComprador = nombreComprador;
-            Productos = productos;
+            Productos = new List<Inventario>();
             Total = total;
         }
     }
