@@ -112,3 +112,9 @@ C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.
 C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.WinForms.xml
 C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\Nesto\RiderProjects\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\user\Desktop\POO Pre parcial 2\Pre_Parcial_POO\Pre-Parcial-2\bin\Debug\LiveCharts.Wpf.xml

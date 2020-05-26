@@ -37,20 +37,29 @@ namespace Pre_Parcial_2
             this.tabNormalUser = new System.Windows.Forms.TabControl();
             this.tpOrder = new System.Windows.Forms.TabPage();
             this.tlpOrder = new System.Windows.Forms.TableLayoutPanel();
-            this.cmbCategories = new System.Windows.Forms.ComboBox();
-            this.lblCategory = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblProduct = new System.Windows.Forms.Label();
+            this.cmbProduct = new System.Windows.Forms.ComboBox();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblCant = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.nudCant = new System.Windows.Forms.NumericUpDown();
+            this.lblDisplayPrice = new System.Windows.Forms.Label();
+            this.lblDisplayTotal = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.tpViewOrders = new System.Windows.Forms.TabPage();
             this.tlpViewOrders = new System.Windows.Forms.TableLayoutPanel();
             this.dgvOrdersHistory = new System.Windows.Forms.DataGridView();
+            this.lblHistory = new System.Windows.Forms.Label();
             this.btnDetails = new System.Windows.Forms.Button();
             this.nudIdPedido = new System.Windows.Forms.NumericUpDown();
             this.lblID = new System.Windows.Forms.Label();
-            this.lblHistory = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.tlpNormalUser.SuspendLayout();
             this.tabNormalUser.SuspendLayout();
             this.tpOrder.SuspendLayout();
             this.tlpOrder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.nudCant)).BeginInit();
             this.tpViewOrders.SuspendLayout();
             this.tlpViewOrders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dgvOrdersHistory)).BeginInit();
@@ -110,59 +119,173 @@ namespace Pre_Parcial_2
             // 
             // tlpOrder
             // 
-            this.tlpOrder.ColumnCount = 4;
+            this.tlpOrder.ColumnCount = 5;
             this.tlpOrder.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.417344F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.416168F));
             this.tlpOrder.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.44696F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.42437F));
             this.tlpOrder.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.18435F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.15946F));
             this.tlpOrder.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 305F));
             this.tlpOrder.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpOrder.Controls.Add(this.cmbCategories, 2, 1);
-            this.tlpOrder.Controls.Add(this.lblCategory, 1, 1);
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tlpOrder.Controls.Add(this.label1, 0, 0);
+            this.tlpOrder.Controls.Add(this.lblProduct, 1, 1);
+            this.tlpOrder.Controls.Add(this.cmbProduct, 2, 1);
+            this.tlpOrder.Controls.Add(this.lblPrice, 1, 2);
+            this.tlpOrder.Controls.Add(this.lblCant, 2, 2);
+            this.tlpOrder.Controls.Add(this.lblTotal, 3, 2);
+            this.tlpOrder.Controls.Add(this.nudCant, 2, 3);
+            this.tlpOrder.Controls.Add(this.lblDisplayPrice, 1, 3);
+            this.tlpOrder.Controls.Add(this.lblDisplayTotal, 3, 3);
+            this.tlpOrder.Controls.Add(this.btnAdd, 2, 4);
             this.tlpOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpOrder.Location = new System.Drawing.Point(2, 2);
             this.tlpOrder.Margin = new System.Windows.Forms.Padding(2);
             this.tlpOrder.Name = "tlpOrder";
-            this.tlpOrder.RowCount = 4;
+            this.tlpOrder.RowCount = 8;
             this.tlpOrder.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.884615F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.983664F));
             this.tlpOrder.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.533654F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.01867F));
             this.tlpOrder.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.58173F));
-            this.tlpOrder.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.48541F));
+            this.tlpOrder.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.484247F));
+            this.tlpOrder.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.36873F));
+            this.tlpOrder.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.57176F));
+            this.tlpOrder.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tlpOrder.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tlpOrder.Size = new System.Drawing.Size(995, 857);
             this.tlpOrder.TabIndex = 1;
             // 
-            // cmbCategories
+            // label1
             // 
-            this.cmbCategories.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cmbCategories.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
+            this.label1.Anchor =
+                ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom |
+                                                       System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.cmbCategories.FormattingEnabled = true;
-            this.cmbCategories.Location = new System.Drawing.Point(474, 41);
-            this.cmbCategories.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbCategories.Name = "cmbCategories";
-            this.cmbCategories.Size = new System.Drawing.Size(333, 37);
-            this.cmbCategories.TabIndex = 0;
-            this.cmbCategories.SelectedIndexChanged += new System.EventHandler(this.cmbCategories_SelectedIndexChanged);
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(10, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Precio";
             // 
-            // lblCategory
+            // lblProduct
             // 
-            this.lblCategory.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblCategory.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
+            this.lblProduct.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblProduct.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblCategory.Location = new System.Drawing.Point(141, 36);
-            this.lblCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(329, 47);
-            this.lblCategory.TabIndex = 1;
-            this.lblCategory.Text = "Seleccione una categoría: ";
-            this.lblCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProduct.Location = new System.Drawing.Point(18, 45);
+            this.lblProduct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProduct.Name = "lblProduct";
+            this.lblProduct.Size = new System.Drawing.Size(306, 47);
+            this.lblProduct.TabIndex = 1;
+            this.lblProduct.Text = "Seleccione un producto:";
+            this.lblProduct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmbProduct
+            // 
+            this.cmbProduct.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tlpOrder.SetColumnSpan(this.cmbProduct, 2);
+            this.cmbProduct.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.cmbProduct.FormattingEnabled = true;
+            this.cmbProduct.Location = new System.Drawing.Point(328, 50);
+            this.cmbProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbProduct.Name = "cmbProduct";
+            this.cmbProduct.Size = new System.Drawing.Size(333, 37);
+            this.cmbProduct.TabIndex = 0;
+            this.cmbProduct.SelectedIndexChanged += new System.EventHandler(this.cmbCategories_SelectedIndexChanged);
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblPrice.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblPrice.Location = new System.Drawing.Point(132, 182);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(77, 45);
+            this.lblPrice.TabIndex = 2;
+            this.lblPrice.Text = "Precio";
+            // 
+            // lblCant
+            // 
+            this.lblCant.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblCant.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblCant.Location = new System.Drawing.Point(446, 182);
+            this.lblCant.Name = "lblCant";
+            this.lblCant.Size = new System.Drawing.Size(101, 45);
+            this.lblCant.TabIndex = 4;
+            this.lblCant.Text = "Cantidad";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblTotal.Font = new System.Drawing.Font("Georgia", 11F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblTotal.Location = new System.Drawing.Point(786, 182);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(67, 45);
+            this.lblTotal.TabIndex = 5;
+            this.lblTotal.Text = "Total";
+            // 
+            // nudCant
+            // 
+            this.nudCant.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudCant.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.nudCant.Location = new System.Drawing.Point(419, 233);
+            this.nudCant.Minimum = new decimal(new int[] {1, 0, 0, 0});
+            this.nudCant.Name = "nudCant";
+            this.nudCant.Size = new System.Drawing.Size(155, 35);
+            this.nudCant.TabIndex = 6;
+            this.nudCant.Value = new decimal(new int[] {1, 0, 0, 0});
+            // 
+            // lblDisplayPrice
+            // 
+            this.lblDisplayPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDisplayPrice.BackColor = System.Drawing.SystemColors.Window;
+            this.lblDisplayPrice.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblDisplayPrice.Location = new System.Drawing.Point(100, 235);
+            this.lblDisplayPrice.Name = "lblDisplayPrice";
+            this.lblDisplayPrice.Size = new System.Drawing.Size(141, 31);
+            this.lblDisplayPrice.TabIndex = 7;
+            this.lblDisplayPrice.Text = "$";
+            this.lblDisplayPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDisplayTotal
+            // 
+            this.lblDisplayTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDisplayTotal.BackColor = System.Drawing.SystemColors.Window;
+            this.lblDisplayTotal.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblDisplayTotal.Location = new System.Drawing.Point(749, 235);
+            this.lblDisplayTotal.Name = "lblDisplayTotal";
+            this.lblDisplayTotal.Size = new System.Drawing.Size(141, 31);
+            this.lblDisplayTotal.TabIndex = 8;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAdd.BackColor = System.Drawing.Color.Wheat;
+            this.btnAdd.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnAdd.Location = new System.Drawing.Point(399, 322);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(194, 55);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Text = "Agregar";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // tpViewOrders
             // 
@@ -190,7 +313,7 @@ namespace Pre_Parcial_2
             this.tlpViewOrders.ColumnStyles.Add(
                 new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
             this.tlpViewOrders.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tlpViewOrders.Controls.Add(this.dgvOrdersHistory, 1, 1);
             this.tlpViewOrders.Controls.Add(this.lblHistory, 1, 0);
             this.tlpViewOrders.Controls.Add(this.btnDetails, 4, 2);
@@ -226,8 +349,22 @@ namespace Pre_Parcial_2
             this.dgvOrdersHistory.Margin = new System.Windows.Forms.Padding(2);
             this.dgvOrdersHistory.Name = "dgvOrdersHistory";
             this.dgvOrdersHistory.RowTemplate.Height = 28;
-            this.dgvOrdersHistory.Size = new System.Drawing.Size(958, 661);
+            this.dgvOrdersHistory.Size = new System.Drawing.Size(953, 661);
             this.dgvOrdersHistory.TabIndex = 0;
+            // 
+            // lblHistory
+            // 
+            this.lblHistory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tlpViewOrders.SetColumnSpan(this.lblHistory, 4);
+            this.lblHistory.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblHistory.Location = new System.Drawing.Point(131, 16);
+            this.lblHistory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHistory.Name = "lblHistory";
+            this.lblHistory.Size = new System.Drawing.Size(716, 38);
+            this.lblHistory.TabIndex = 4;
+            this.lblHistory.Text = "Pedidos de ";
+            this.lblHistory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnDetails
             // 
@@ -235,7 +372,7 @@ namespace Pre_Parcial_2
             this.btnDetails.BackColor = System.Drawing.Color.Wheat;
             this.btnDetails.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnDetails.Location = new System.Drawing.Point(784, 758);
+            this.btnDetails.Location = new System.Drawing.Point(779, 758);
             this.btnDetails.Margin = new System.Windows.Forms.Padding(2);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Size = new System.Drawing.Size(187, 55);
@@ -247,7 +384,7 @@ namespace Pre_Parcial_2
             // nudIdPedido
             // 
             this.nudIdPedido.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudIdPedido.Location = new System.Drawing.Point(549, 770);
+            this.nudIdPedido.Location = new System.Drawing.Point(544, 770);
             this.nudIdPedido.Margin = new System.Windows.Forms.Padding(2);
             this.nudIdPedido.Name = "nudIdPedido";
             this.nudIdPedido.Size = new System.Drawing.Size(160, 30);
@@ -258,27 +395,13 @@ namespace Pre_Parcial_2
             this.lblID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblID.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblID.Location = new System.Drawing.Point(197, 766);
+            this.lblID.Location = new System.Drawing.Point(195, 766);
             this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(278, 38);
+            this.lblID.Size = new System.Drawing.Size(275, 38);
             this.lblID.TabIndex = 3;
             this.lblID.Text = "Ingrese ID de pedido: ";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lblHistory
-            // 
-            this.lblHistory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tlpViewOrders.SetColumnSpan(this.lblHistory, 4);
-            this.lblHistory.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblHistory.Location = new System.Drawing.Point(134, 16);
-            this.lblHistory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblHistory.Name = "lblHistory";
-            this.lblHistory.Size = new System.Drawing.Size(716, 38);
-            this.lblHistory.TabIndex = 4;
-            this.lblHistory.Text = "Pedidos de ";
-            this.lblHistory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnBack
             // 
@@ -316,6 +439,7 @@ namespace Pre_Parcial_2
             this.tabNormalUser.ResumeLayout(false);
             this.tpOrder.ResumeLayout(false);
             this.tlpOrder.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.nudCant)).EndInit();
             this.tpViewOrders.ResumeLayout(false);
             this.tlpViewOrders.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dgvOrdersHistory)).EndInit();
@@ -336,8 +460,16 @@ namespace Pre_Parcial_2
         private System.Windows.Forms.NumericUpDown nudIdPedido;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblHistory;
-        private System.Windows.Forms.ComboBox cmbCategories;
-        private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblProduct;
+        private System.Windows.Forms.ComboBox cmbProduct;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown nudCant;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblCant;
+        private System.Windows.Forms.Label lblDisplayPrice;
+        private System.Windows.Forms.Label lblDisplayTotal;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

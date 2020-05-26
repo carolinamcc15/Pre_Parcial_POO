@@ -70,5 +70,22 @@ namespace Pre_Parcial_2
             }
             return dataTable;
         }
+        
+        public static void InsertOrder(Pedido pedido)
+        {
+            string querySQL = $"INSERT INTO PEDIDO(fechacompra, nombre) " +
+                              $"VALUES ({DateTime.Now}, '{pedido.NombreComprador}');";
+            
+            DBConnection.ExecuteNonQuery(querySQL);
+        }
+        public static void InsertOrder2(Pedido pedido)
+        {
+            string querySQL = $"INSERT INTO DETALLE_PEDIDO(numpedido,idproducto,cantproducto,precioventa) " +
+                                $"VALUES (1,4,2,(SELECT precio FROM inventario WHERE idproducto = 4)1.1) " +
+                                $"(1,5,2,(SELECT precio FROM inventario WHERE idproducto = 5)1.1));";
+            
+            DBConnection.ExecuteNonQuery(querySQL);
+        }
+  
     }
 }
